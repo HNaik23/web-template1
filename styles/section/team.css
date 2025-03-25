@@ -1,0 +1,117 @@
+.single-team-inner {
+  @apply relative mb-[30px] rounded-[22px] border border-solid border-[#E3E3E3] shadow-[0px_4.4px_20px_rgba(19,_16,_34,_0.05)];
+}
+.single-team-inner .thumb {
+  @apply relative overflow-hidden rounded-[22px];
+}
+.single-team-inner .thumb img {
+  @apply scale-[1.05] transform transition-all duration-[0.9s] ease-[ease];
+}
+.single-team-inner .thumb .team-social-inner {
+  @apply absolute bottom-[10px] left-[50%] translate-x-[-50%] transform opacity-0 transition-all duration-[0.4s] ease-[ease];
+}
+.single-team-inner .team-social-inner {
+  @apply inline-block h-[50px] rounded-[50px] bg-white px-[25px] py-[11px] transition-all duration-[0.4s] ease-[ease];
+}
+.single-team-inner .team-social-inner li {
+  @apply mr-[10px] inline-block border-r border-solid border-[#E3E3E3] pr-[10px] text-[15px] text-[#737588];
+}
+.single-team-inner .team-social-inner li:last-child {
+  @apply mr-0 border-r-0 pr-0;
+}
+.single-team-inner .details {
+  @apply p-[20px];
+}
+.single-team-inner .details p {
+  @apply mb-0;
+}
+.single-team-inner:hover .thumb img {
+  @apply scale-[1.1];
+}
+.single-team-inner:hover .thumb .team-social-inner {
+  @apply visible bottom-[20px] opacity-100;
+}
+.single-team-inner.style-2 {
+  @apply rounded-[10px] border-0;
+}
+.single-team-inner.style-2 .thumb {
+  @apply rounded-[10px];
+}
+.single-team-inner.style-2 .details {
+  @apply absolute relative bottom-0 right-0 w-full p-[0_20px_0];
+}
+.single-team-inner.style-2 .details .details-inner {
+  @apply rounded-tl-[10px] rounded-tr-[10px] bg-[rgba(255,255,255,0.8)] p-[20px];
+}
+.single-team-inner.style-2 .details h5 {
+  @apply text-main-color;
+}
+.single-team-inner.style-2 .details h5:hover a {
+  @apply text-heading-color;
+}
+.single-team-inner.style-2 .details p {
+  @apply text-heading-color;
+}
+.single-team-inner.style-2 .details .team-social-inner {
+  @apply h-[40px] rounded-[5px] px-[15px] py-[6px];
+}
+.single-team-inner.style-3 {
+  @apply border-0;
+}
+.single-team-inner.style-3 .thumb {
+  @apply bg-white p-[30px];
+}
+.single-team-inner.style-3 .thumb .team-social-inner {
+  @apply inline-block h-auto rounded-none bg-transparent p-0 transition-all duration-[0.4s] ease-[ease];
+}
+.single-team-inner.style-3 .thumb .team-social-inner li {
+  @apply mr-0 inline-block border-r-0 pr-0 text-[15px] text-white;
+}
+.single-team-inner.style-3 .thumb .team-social-inner li a {
+  @apply mx-0 my-[2px] inline-block h-[35px] w-[35px] rounded-tl-[4px] rounded-tr-[4px] bg-main-color text-center leading-[35px] text-white !important;
+}
+.single-team-inner.style-3 .details {
+  @apply relative z-[2] m-[30px] mt-[-60px] rounded-[10px] bg-white p-[30px] shadow-[0px_3px_20px_rgba(0,_33,_71,_0.06)];
+}
+.single-team-inner.style-3:hover .thumb .team-social-inner {
+  @apply bottom-[43px];
+}
+.single-team-inner.style-4 {
+  @apply overflow-hidden rounded-[0_70px_0_70px] border-0;
+}
+.single-team-inner.style-4 .thumb {
+  @apply bg-white p-0;
+}
+.single-team-inner.style-4 .thumb .team-social-inner {
+  @apply absolute left-[20px] top-[25px] inline-block h-auto w-[50px] rounded-none bg-transparent p-0 transition-all duration-[0.4s] ease-[ease];
+}
+.single-team-inner.style-4 .thumb .team-social-inner li {
+  @apply mr-0 inline-block border-r-0 pr-0 text-[15px] text-white;
+}
+.single-team-inner.style-4 .thumb .team-social-inner li a {
+  @apply m-[2px] inline-block h-[35px] w-[35px] rounded-[4px] bg-main-color text-center leading-[35px] text-white !important;
+}
+.single-team-inner.style-4 .details {
+  @apply invisible absolute bottom-[-20px] z-[2] w-full rounded-none bg-main-color bg-white p-[30px] opacity-0 transition-all duration-[0.4s] ease-[ease];
+}
+.single-team-inner.style-4:hover .thumb .team-social-inner {
+  @apply left-[43px];
+}
+.single-team-inner.style-4:hover .details {
+  @apply visible bottom-0 opacity-100;
+}
+
+.team-details-page .thumb {
+  @apply bg-[#f5f3ef] py-[40px_0] pr-[40px];
+}
+.team-details-page .thumb img {
+  @apply mr-[-80px] w-full;
+}
+.team-details-page .social-media li a {
+  @apply h-[46px] w-[46px] rounded-none bg-heading-color text-[16px] leading-[46px] text-white;
+}
+.team-details-page .social-media li a:hover {
+  @apply bg-main-color;
+}
+
+/*# sourceMappingURL=team.css.map */

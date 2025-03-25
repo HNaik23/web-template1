@@ -1,0 +1,171 @@
+/*----------------------------------------------
+    # banner style
+----------------------------------------------*/
+.banner-area {
+  @apply mt-[-120px];
+}
+
+.banner-area-1 {
+  @apply pt-[180px];
+}
+.banner-area-1 .animate-img-1 {
+  @apply absolute bottom-[100px] left-20;
+}
+.banner-area-1 .animate-img-2 {
+  @apply absolute bottom-[50px] left-[100px];
+}
+
+.banner-area-2 {
+  @apply bg-[url("../images/bg/8.png")] pb-[70px] pt-[210px];
+}
+.banner-area-2 .bg-img-2 {
+  @apply absolute right-[-100px] top-0 w-[660px];
+}
+
+.banner-area-3 {
+  @apply ml-0;
+}
+.banner-area-3 .bg-gray {
+  @apply relative px-0 py-[140px];
+}
+.banner-area-3 .img-right {
+  @apply absolute inset-y-0 right-0 z-[1] h-full w-[55%];
+}
+.banner-area-3:after {
+  @apply absolute right-[40%] top-0 z-[2] h-full w-1/5 bg-[linear-gradient(to_right,#F8F9FC_50%,transparent)] content-[""];
+}
+.banner-area-3 .banner-inner {
+  @apply z-[3] !important;
+}
+
+.navbar-area-2 .nav-right-part {
+  @apply items-center;
+}
+.navbar-area-2 .nav-right-part .navbar-phone {
+  @apply text-heading-color;
+  @apply bg-transparent;
+}
+.navbar-area-2 .nav-right-part .navbar-phone .icon {
+  @apply bg-[#246bfd2e];
+}
+.navbar-area-2 .nav-right-part .navbar-phone .icon img {
+  filter: invert(38%) sepia(100%) saturate(3579%) hue-rotate(212deg) brightness(97%) contrast(105%);
+}
+.navbar-area-2 .nav-right-part .navbar-phone h5,
+.navbar-area-2 .nav-right-part .navbar-phone span {
+  @apply text-heading-color;
+}
+
+.banner-inner {
+  @apply relative z-[1];
+}
+.banner-inner .subtitle {
+  @apply mb-[15px] inline-block rounded-[30px] bg-white px-5 py-2 text-sm font-medium tracking-[1px] shadow-[0_4.4px_30px_rgba(19,16,34,0.05)];
+}
+.banner-inner .title {
+  @apply mb-5 text-[60px] font-bold;
+}
+.banner-inner .title span {
+  @apply text-main-color;
+}
+.banner-inner .content {
+  @apply mb-8;
+}
+
+.banner-thumb {
+  @apply relative;
+}
+.banner-thumb .main-img {
+  @apply rounded-[300px_300px_0_0];
+}
+.banner-thumb:after {
+  @apply absolute bottom-[-25px] left-[-25px] h-full w-full rounded-[300px_300px_0_0] border-[5px] border-solid border-main-color content-[""];
+}
+.banner-thumb .banner-animate-img {
+  @apply absolute;
+}
+.banner-thumb .banner-animate-img-1 {
+  @apply left-[-140px];
+}
+.banner-thumb .banner-animate-img-2 {
+  @apply bottom-[-25px] right-[25px] h-[120px] w-[120px] bg-main-color p-5;
+}
+.banner-thumb .banner-animate-img-3 {
+  @apply bottom-[-68px] right-[-9px];
+}
+
+.banner-thumb-2 {
+  @apply relative;
+}
+.banner-thumb-2 .banner-animate-img {
+  @apply absolute;
+}
+.banner-thumb-2 .main-img-wrap {
+  @apply relative;
+}
+.banner-thumb-2 .main-img-wrap .banner-animate-img-1 {
+  @apply left-[-140px] z-[1] w-[120px];
+}
+.banner-thumb-2 .main-img-wrap .banner-animate-img-2 {
+  @apply right-[-70px] top-[50px] z-[1];
+}
+.banner-thumb-2 .main-img-wrap .banner-animate-img-3 {
+  @apply bottom-[100px] left-[-200px] z-[1];
+}
+.banner-thumb-2 .banner-animate-img-4 {
+  @apply -right-5 top-0 z-0;
+}
+.banner-thumb-2 .main-img-wrap {
+  @apply z-[1] ml-40;
+}
+
+.banner-thumb-3 {
+  @apply relative;
+  @apply relative;
+}
+.banner-thumb-3 .banner-animate-img {
+  @apply absolute;
+}
+.banner-thumb-3 .banner-animate-img-1 {
+  @apply left-[-50px] top-[30%];
+}
+.banner-thumb-3 .banner-animate-img-2 {
+  @apply bottom-10 right-[50px];
+}
+
+.banner-area-left-style {
+  @apply pl-[140px] pt-[100px];
+}
+.banner-area-left-style .animate-img {
+  @apply absolute bottom-[70px] left-[-100px] w-20;
+}
+.banner-area-left-style .title {
+  @apply text-[90px] font-semibold;
+}
+.banner-area-left-style h3 {
+  @apply font-semibold;
+}
+.banner-area-left-style .btn-gray svg {
+  @apply float-left mr-[5px] pt-0.5 text-base text-main-color;
+}
+
+.banner-left {
+  @apply absolute left-0 top-0 inline-block h-full w-[140px] bg-[rgba(255,255,255,0.05)] text-center;
+}
+.banner-left .logo {
+  @apply bg-[rgba(255,255,255,0.05)] px-[15px] py-[35px];
+}
+.banner-left ul {
+  @apply px-0 py-20;
+}
+.banner-left ul li {
+  @apply list-none;
+}
+.banner-left ul li a {
+  @apply inline-block rounded-[5px] p-[15px];
+}
+.banner-left ul li a:hover {
+  @apply bg-main-color;
+}
+
+/*# sourceMappingURL=banner.css.map */

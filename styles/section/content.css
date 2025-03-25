@@ -1,0 +1,115 @@
+/*----------------------------------------------
+    # content style
+----------------------------------------------*/
+.single-counter-inner {
+  @apply mb-[30px];
+}
+.single-counter-inner .thumb img {
+  @apply transition-all duration-[0.4s] ease-[ease];
+}
+.single-counter-inner:hover .thumb img {
+  transform: rotateY(180deg);
+}
+.single-counter-inner.style-2 {
+  @apply rounded-[5px] border border-solid border-[rgba(255,255,255,0.1)] p-[30px];
+}
+.single-counter-inner.style-2 p {
+  @apply mb-0;
+}
+
+.single-contact-list {
+  @apply mb-[30px] rounded-[5px] border border-solid border-[rgba(66,74,97,0.1)] bg-white p-[50px] shadow-[0px_3px_20px_rgba(0,33,71,0.06)] transition-all duration-[0.4s] ease-[ease];
+}
+.single-contact-list .media-left {
+  @apply mr-[15px];
+}
+.single-contact-list .media-body {
+  @apply -mt-0.5;
+}
+.single-contact-list .media-body h5 {
+  @apply mb-1.5;
+}
+.single-contact-list .media-body h6 {
+  @apply mb-0;
+}
+.single-contact-list:hover {
+  box-shadow: 0px 10px 30px rgba(0, 33, 71, 0.08);
+}
+
+.client-slider .item {
+  @apply inline-flex items-center justify-center self-center;
+}
+.client-slider .thumb {
+  @apply flex items-center self-center text-center;
+}
+.client-slider .thumb img {
+  @apply w-auto;
+}
+.client-slider .owl-nav {
+  @apply hidden;
+}
+
+.client-border-radius {
+  @apply rounded-[15px_15px_0_0];
+}
+
+.saller-area-inner {
+  @apply -mx-2.5 my-0 ps-0;
+}
+.saller-area-inner li {
+  @apply inline-flex w-[18.2%] list-none;
+}
+
+.single-saller-inner {
+  @apply m-2.5 rounded-[10px] border border-solid border-[#E3E3E3] p-5;
+}
+
+.inovating-tab .nav-tabs {
+  border: 0 !important;
+  @apply inline-flex;
+}
+.inovating-tab .nav-tabs button {
+  @apply mb-2 mr-2 bg-[rgba(255,255,255,0.1)] px-7 pb-[11px] pt-2.5 shadow-[0px_10px_60px_rgba(0,0,0,0.07)];
+  border-radius: 60px !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+.inovating-tab .nav-tabs button.active {
+  @apply bg-main-color !important;
+}
+
+.single-case-study-inner.style-4 .details {
+  @apply invisible absolute bottom-5 left-0 right-0 m-[25px] rounded-[5px] opacity-0 transition-all duration-[0.4s] ease-[ease];
+}
+.single-case-study-inner.style-4 .details .right-arrow {
+  @apply rounded-[5px_0_5px_0] bg-main-color text-white;
+}
+.single-case-study-inner.style-4:hover .details {
+  @apply visible bottom-0 opacity-100;
+}
+
+.border-radius-30 {
+  @apply rounded-[30px];
+}
+
+.fw-400 {
+  @apply font-normal;
+}
+
+.single-testimonial-inner.style-4 {
+  @apply relative mt-[90px] border-2 border-solid border-[#263E6B] bg-transparent p-[30px];
+}
+.single-testimonial-inner.style-4 .thumb {
+  @apply mb-[15px] mt-[-120px];
+}
+.single-testimonial-inner.style-4 .thumb img {
+  @apply rounded-[70px];
+}
+.single-testimonial-inner.style-4 .icon {
+  @apply absolute bottom-[30px] right-5;
+}
+.single-testimonial-inner.style-4 p {
+  @apply text-[15px];
+}
+
+/*# sourceMappingURL=content.css.map */

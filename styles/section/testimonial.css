@@ -1,0 +1,94 @@
+.single-testimonial-inner {
+  @apply m-[10px] bg-white p-[40px_30px] shadow-[0px_3px_20px_rgba(0,_33,_71,_0.06)];
+}
+.single-testimonial-inner .designation {
+  @apply font-semibold;
+}
+.single-testimonial-inner .icon {
+  @apply inline-block;
+}
+.single-testimonial-inner.style-1 {
+  @apply relative mb-[120px];
+}
+.single-testimonial-inner.style-1:after {
+  @apply absolute bottom-[-9px] left-[50%] -ml-[10px] h-[20px] w-[20px] rotate-[-45deg] bg-white content-[""];
+}
+.single-testimonial-inner.style-1 .thumb {
+  @apply absolute bottom-[-105px] left-[50%] h-[80px] w-[80px] -translate-x-[50%] rounded-full bg-white p-[8px] shadow-[0px_3px_20px_rgba(0,_33,_71,_0.06)];
+}
+.single-testimonial-inner.style-1 .thumb img {
+  @apply rounded-full;
+}
+.single-testimonial-inner.style-2 .icon {
+  @apply relative h-[50px] w-[50px] rounded-full border-[2px] border-solid border-[rgba(36,_107,_253,_0.1)] p-[5px] text-center;
+}
+.single-testimonial-inner.style-2 .icon:after {
+  @apply absolute left-[3px] top-[3px] z-0 h-[40px] w-[40px] rounded-full bg-main-color content-[""];
+}
+.single-testimonial-inner.style-2 .icon img {
+  @apply relative z-[2] mx-auto w-auto pt-[9px] text-white;
+  filter: brightness(10);
+}
+.single-testimonial-inner.style-2 .thumb img {
+  @apply w-auto rounded-full border border-solid border-main-color p-[5px];
+}
+.single-testimonial-inner.style-2 .ratting-inner {
+  @apply text-[15px];
+}
+.single-testimonial-inner.style-2 .ratting-inner svg {
+  @apply text-[13px];
+}
+.single-testimonial-inner.style-3 {
+  @apply bg-transparent p-0 shadow-none;
+}
+.single-testimonial-inner.style-3 img {
+  @apply w-auto;
+}
+.single-testimonial-inner.style-3 .thumb {
+  @apply relative pr-[50px];
+}
+.single-testimonial-inner.style-3 .thumb .shadow-img {
+  @apply rounded-[8px] bg-white p-[35px_20px];
+}
+.single-testimonial-inner.style-3 .thumb .main-img {
+  @apply absolute right-0 top-[50%] w-[130px] translate-y-[-50%] rounded-[8px];
+}
+.single-testimonial-inner.style-3 .details {
+  @apply relative p-[10px];
+}
+.single-testimonial-inner.style-3 .details .quote {
+  @apply absolute left-0 top-0;
+}
+.single-testimonial-inner.style-3 .details .designation {
+  @apply text-[15px] font-normal;
+}
+.single-testimonial-inner.style-3 .details h6 {
+  @apply text-main-color;
+}
+.single-testimonial-inner.style-3 .details .ratting-inner {
+  @apply text-[10px];
+}
+
+.testimonial-slider-2 .owl-nav {
+  @apply hidden;
+}
+
+.testimonial-tab {
+  @apply border-0 !important;
+}
+.testimonial-tab button {
+  @apply h-[140px] w-[140px] rounded-[50%] p-0 p-[30px] transition-all duration-[0.4s] ease-[ease];
+  border-width: 0px !important;
+}
+.testimonial-tab button img {
+  @apply w-full transition-all duration-[0.4s] ease-[ease];
+}
+.testimonial-tab button:hover {
+  border-width: 0px !important;
+}
+.testimonial-tab button.active {
+  @apply rounded-[50%] border-[2px] border-dashed border-main-color p-[12px];
+  border-width: 2px !important;
+}
+
+/*# sourceMappingURL=testimonial.css.map */

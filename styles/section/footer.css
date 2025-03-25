@@ -1,0 +1,176 @@
+/*--------------------------------------------------
+    ##Footer style
+---------------------------------------------------*/
+.footer-area {
+  @apply relative;
+  margin-top: 90px;
+}
+.footer-area:after {
+  content: "";
+  @apply absolute left-0 top-0 z-[-1] h-full w-full bg-heading-color;
+}
+.footer-area .widget {
+  @apply relative z-[2];
+  margin-bottom: 70px;
+}
+.footer-area .widget-title {
+  margin-bottom: 30px;
+  @apply relative;
+}
+.footer-area .widget_about .thumb {
+  margin-bottom: 20px;
+}
+.footer-area .widget_about .thumb img {
+  @apply max-w-[150px];
+}
+.footer-area .widget_about .details p {
+  margin-bottom: 0;
+  @apply text-white;
+}
+.footer-area .widget_about .details p svg {
+  @apply text-main-color;
+  margin-right: 10px;
+}
+.footer-area .widget_about .details p + p {
+  font-weight: 500;
+}
+.footer-area .widget_about .details .social-media {
+  margin-top: 26px;
+}
+.footer-area .widget_about .details .social-media li a:hover {
+  @apply bg-main-color text-white;
+}
+.footer-area .widget_about .subscribe {
+  @apply relative;
+}
+.footer-area .widget_about .subscribe input {
+  @apply h-[44px] w-full rounded-[5px] border-[1px] border-[#E3E3E3] pl-[15px] pr-[50px] shadow-none outline-0;
+}
+.footer-area .widget_about .subscribe button {
+  @apply absolute right-0 top-0 h-[44px] w-[40px] rounded-br-[5px] rounded-tr-[5px] border-0 bg-main-color text-[15px] text-white transition-all duration-[0.4s] ease-[ease];
+}
+.footer-area .widget_about .subscribe button:hover {
+  @apply bg-heading-color;
+}
+.footer-area .widget_nav_menu ul {
+  @apply m-0 p-0;
+}
+.footer-area .widget_nav_menu ul li {
+  @apply relative mb-[7px] list-none text-white;
+}
+.footer-area .widget_nav_menu ul li svg {
+  margin-right: 8px;
+  color: #333f4d;
+  @apply transition-all duration-[0.4s] ease-[ease];
+}
+.footer-area .widget_nav_menu ul li:hover svg {
+  @apply text-main-color;
+}
+.footer-area .widget_subscribe .single-input-inner {
+  @apply relative;
+}
+.footer-area .widget_subscribe .single-input-inner input {
+  @apply pr-[40px];
+}
+.footer-area .widget_subscribe button {
+  @apply absolute right-[15px] top-[10px] border-0 bg-transparent p-0 text-main-color;
+}
+.footer-area .widget_subscribe label {
+  @apply relative pl-[22px] text-white;
+}
+.footer-area .widget_subscribe label input {
+  @apply absolute left-0 top-[7px];
+}
+.footer-area .widget-recent-post ul li .media .media-body .title {
+  @apply text-white;
+}
+.footer-area .widget-recent-post ul li .media .media-body .post-info span {
+  @apply text-white;
+}
+
+.footer-top {
+  @apply pb-[90px] pt-[55px];
+}
+
+.footer-bottom {
+  @apply relative z-[2] border-t border-[#E3E3E3] pb-[23px] pt-[23px];
+}
+.footer-bottom p {
+  margin-bottom: 0;
+  @apply text-white;
+}
+.footer-bottom a {
+  @apply mr-[10px] text-white;
+}
+.footer-bottom a:last-child {
+  @apply mr-0;
+}
+
+.footer-subscribe {
+  @apply translate-y-[-90px];
+}
+.footer-subscribe .footer-subscribe-inner {
+  @apply relative rounded-[10px] bg-[url("../images/bg/6.png")] bg-cover p-[40px];
+}
+.footer-subscribe .footer-subscribe-inner h2 {
+  @apply text-white;
+}
+.footer-subscribe .footer-subscribe-inner input {
+  @apply h-[55px] w-full border-0 pl-[20px] pr-[150px] text-heading-color;
+}
+.footer-subscribe .footer-subscribe-inner .btn {
+  @apply absolute right-[30px];
+}
+.footer-subscribe .footer-subscribe-inner.style-2 {
+  @apply mt-[-90px] flex rounded-none text-center;
+}
+.footer-subscribe .footer-subscribe-inner.style-2 .media {
+  @apply w-[340px] p-[30px];
+}
+.footer-subscribe .footer-subscribe-inner.style-2 p {
+  @apply text-[13px];
+}
+.footer-subscribe .footer-subscribe-inner.style-2 input {
+  @apply pl-[18px];
+}
+.footer-subscribe .footer-subscribe-inner.style-2 .btn {
+  @apply relative right-auto;
+}
+.footer-subscribe .footer-subscribe-inner.style-2 .row {
+  @apply p-[20px] p-[30px];
+}
+.footer-subscribe .footer-subscribe-inner.style-3 {
+  @apply rounded-[10px] border-2 border-[#FFFCFF33];
+  background-image: none !important;
+  background-color: #160443 !important;
+}
+.footer-subscribe .footer-subscribe-inner.style-3 input {
+  @apply h-[67px] rounded-[45px] border-[1px] border-[#423467] bg-transparent text-white;
+}
+.footer-subscribe .footer-subscribe-inner.style-3 .btn {
+  @apply right-[45px] mt-[6px] rounded-[60px];
+}
+
+.footer-area-2 .widget-title {
+  @apply text-heading-color !important;
+}
+.footer-area-2 p {
+  @apply text-heading-color !important;
+}
+.footer-area-2 a {
+  @apply text-paragraph-color !important;
+}
+.footer-area-2 a svg {
+  @apply text-paragraph-color !important;
+}
+.footer-area-2 a:hover {
+  @apply text-main-color !important;
+}
+.footer-area-2 .widget_about {
+  @apply bg-white p-[25px];
+}
+.footer-area-2 .footer-bottom {
+  @apply border-t border-[#E3E3E3];
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,425 @@
+/*------------------------------------------------
+    blog style
+------------------------------------------------*/
+.single-blog-inner {
+  @apply mb-[50px] overflow-hidden transition-all duration-[0.4s] ease-[ease];
+}
+.single-blog-inner .thumb {
+  @apply relative mb-5 overflow-hidden rounded-[10px];
+}
+.single-blog-inner .thumb .date {
+  @apply absolute left-5 top-5 h-[94px] w-[84px] rounded-[5px] bg-main-color p-[15px] pt-[22px] text-center text-xl font-semibold leading-[1.2] text-white;
+}
+.single-blog-inner .thumb img {
+  @apply scale-105 transition-all duration-[0.9s] ease-[ease];
+}
+.single-blog-inner .blog-meta {
+  @apply m-0 mb-[15px] p-0;
+}
+.single-blog-inner .blog-meta li {
+  @apply mr-[15px] inline-block text-sm text-[#8A8A8A];
+}
+.single-blog-inner .blog-meta li i {
+  @apply mr-1 text-main-color;
+}
+.single-blog-inner .blog-meta li svg {
+  @apply mr-1 text-main-color;
+}
+.single-blog-inner .blog-meta li:last-child {
+  @apply me-0;
+}
+.single-blog-inner .details h2 {
+  @apply mb-[3px];
+}
+.single-blog-inner .details h2:hover a {
+  @apply text-main-color;
+}
+.single-blog-inner .details .title {
+  @apply mb-[17px];
+}
+.single-blog-inner .details p {
+  @apply mb-[16px];
+}
+.single-blog-inner .details .read-more-text {
+  @apply font-semibold;
+}
+.single-blog-inner .portfolio-details {
+  @apply absolute bottom-0 left-0 overflow-hidden rounded-[0_30px_0_0] bg-main-color;
+}
+.single-blog-inner .portfolio-details h5 {
+  @apply bg-heading-color px-[30px] py-2.5 text-white;
+}
+.single-blog-inner .portfolio-details p {
+  @apply mb-1 border-b border-dashed border-b-white px-[30px] pb-[7px] pt-[5px] text-white;
+}
+.single-blog-inner .portfolio-details p:last-child {
+  @apply border-b-0;
+}
+.single-blog-inner .portfolio-details strong {
+  @apply inline-block min-w-[95px] text-white;
+}
+.single-blog-inner:hover .thumb img {
+  @apply scale-110;
+}
+
+.single-blog-list {
+  @apply mb-[30px] overflow-hidden rounded-md shadow-[0px_3px_20px_rgba(0,33,71,0.06)] transition-all duration-[0.4s] ease-[ease];
+}
+.single-blog-list .thumb {
+  @apply relative overflow-hidden;
+}
+.single-blog-list .thumb img {
+  @apply transition-all duration-[0.7s] ease-[ease];
+}
+.single-blog-list .thumb .date {
+  @apply absolute right-0 top-[25px] rounded-[5px_0_0_5px] border-l-[3px] border-solid border-l-main-color bg-white px-[18px] py-[9px] font-semibold text-heading-color;
+}
+.single-blog-list .thumb .date-2 {
+  @apply absolute right-[15px] top-[15px] rounded-[7px] bg-main-color px-5 py-[9px] text-white;
+}
+.single-blog-list .details {
+  @apply relative px-[30px] py-[25px];
+}
+.single-blog-list .details .cat {
+  @apply absolute -top-6 right-0 rounded-[5px_0_0_5px] bg-main-color px-[18px] py-[9px] text-white;
+}
+.single-blog-list .details .blog-meta li {
+  @apply mr-3 inline-block list-none text-xs;
+}
+.single-blog-list .details .blog-meta li svg {
+  @apply me-[4px] text-main-color;
+}
+.single-blog-list .details p {
+  @apply font-medium;
+}
+.single-blog-list .details p i,
+.single-blog-list .details p svg {
+  @apply mr-[10px];
+}
+.single-blog-list .details h5 {
+  @apply mb-0;
+}
+.single-blog-list .details .meta {
+  @apply mt-5 border-t border-solid border-t-[#ededed] pt-[18px];
+}
+.single-blog-list .details .meta p {
+  @apply mb-0;
+}
+.single-blog-list:hover {
+  @apply shadow-[0px_10px_30px_rgba(0,33,71,0.08)];
+}
+.single-blog-list:hover .thumb img {
+  @apply scale-110;
+}
+.single-blog-list.style-2 .thumb img {
+  @apply rounded-[5px];
+}
+.single-blog-list.style-2 .details .blog-meta {
+  @apply relative z-[2] -mt-16 ml-[50px] mr-[-30px] flex items-center rounded-[6px_0_0_6px] bg-[#f8f9fc] p-2.5;
+}
+.single-blog-list.style-2 .details .blog-meta .date {
+  @apply h-[50px] w-[50px] rounded-[5px] bg-main-color p-2 text-center leading-[1.4] text-white;
+}
+.single-blog-list.style-3 .thumb img {
+  @apply rounded-[5px];
+}
+.single-blog-list.style-3 .details .blog-meta {
+  @apply relative z-[2] mr-12 mt-[-54px] flex items-center rounded-md bg-main-color p-2.5;
+}
+.single-blog-list.style-3 .details .blog-meta li {
+  @apply text-white;
+}
+.single-blog-list.style-3 .details .blog-meta li svg {
+  @apply text-white;
+}
+.single-blog-list.style-3 .details .blog-meta li span {
+  @apply mr-[3px] inline-block h-[30px] w-[30px] rounded-[50%] border border-solid border-white p-[3px];
+}
+.single-blog-list.style-3 .details .blog-meta li span img {
+  @apply rounded-[50%];
+}
+.single-blog-list.style-3 .details .blog-meta .date {
+  @apply h-[50px] w-[50px] rounded-[5px] p-2 text-center leading-[1.4] text-white;
+}
+.single-blog-list.style-3 .details .btn-wrap {
+  @apply relative;
+}
+.single-blog-list.style-3 .details .btn-wrap .read-more-text {
+  @apply relative z-[2] bg-white pl-[5px];
+}
+.single-blog-list.style-3 .details .btn-wrap .read-more-text svg {
+  @apply bg-white;
+}
+.single-blog-list.style-3 .details .btn-wrap:after {
+  @apply visible absolute left-0 top-[15px] h-px w-full bg-[#cccccc] opacity-100 content-[""];
+}
+
+/************ page navigation ************/
+.pagination {
+  @apply mx-0 mb-0 mt-2.5 inline-flex;
+}
+.pagination .prev,
+.pagination .next {
+  @apply transition-all duration-[0.4s] ease-[ease];
+}
+.pagination .page-numbers {
+  @apply mr-2 block h-10 w-10 rounded-[5px] border-0 bg-[#f8f9fc] text-center text-base font-bold leading-[40px] text-heading-color no-underline transition-all duration-[0.4s] ease-[ease];
+}
+.pagination .page-numbers:active, .pagination .page-numbers:focus, .pagination .page-numbers:hover {
+  @apply bg-main-color text-white;
+}
+.pagination .page-numbers.current {
+  @apply bg-main-color text-white;
+}
+
+/******** blog-details-page-content ***********/
+.blog-details-page-content .single-blog-inner {
+  box-shadow: none !important;
+  @apply rounded-none border-b-0 pb-0;
+}
+.blog-details-page-content blockquote {
+  @apply relative my-[30px] border border-solid border-[rgba(66,74,97,0.1)] bg-white px-10 py-[30px] text-center font-medium;
+}
+.blog-details-page-content blockquote p {
+  margin-bottom: 0 !important;
+  @apply text-left;
+}
+.blog-details-page-content blockquote svg {
+  width: 50px !important;
+  @apply mb-[15px] inline-block h-[50px] rounded-[50%] bg-main-color p-[15px] text-center leading-[50px] text-white;
+}
+.blog-details-page-content blockquote .name {
+  @apply relative mt-[15px] pl-10 text-left;
+}
+.blog-details-page-content blockquote .name:after {
+  @apply absolute left-0 top-3 h-[3px] w-7 bg-main-color content-[""];
+}
+
+/*********** tag-and-share ************/
+.tag-and-share {
+  @apply mt-5 border-b border-solid border-b-neutral-200 px-0 py-[15px];
+}
+.tag-and-share .tags a {
+  @apply inline-block h-[30px] rounded-[5px] border border-solid border-[rgba(66,74,97,0.1)] bg-[#f2f5f6] px-3 py-0 text-xs font-semibold leading-[29px] text-[#757575] transition-all duration-[0.4s] ease-[ease];
+}
+.tag-and-share .tags a:hover {
+  @apply border-main-color bg-main-color text-white;
+}
+.tag-and-share strong {
+  @apply mr-1.5 text-xl text-heading-color;
+}
+.tag-and-share .blog-share ul {
+  @apply m-0 inline-block p-0;
+}
+.tag-and-share .blog-share ul li {
+  @apply mr-2.5 inline-block list-none text-heading-color;
+}
+.tag-and-share .blog-share ul li:last-child {
+  @apply mr-0;
+}
+
+/****** prev-next-post ******/
+.prev-next-post {
+  @apply mt-[50px] rounded-[5px] border border-solid border-[#ededed] p-5;
+}
+.prev-next-post .btn {
+  @apply inline-block h-[50px] w-[50px] p-0 text-center leading-[50px];
+}
+.prev-next-post .btn svg {
+  @apply ml-0 text-xs;
+  float: initial;
+}
+
+.blog-comment-form {
+  @apply pt-[30px];
+}
+.blog-comment-form h3 {
+  @apply relative mb-[32px];
+}
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  @apply block;
+}
+
+.blog-comment {
+  @apply relative mt-[40px];
+}
+
+.blog-comment .comment-list {
+  @apply m-0 list-none p-0;
+}
+
+.blog-comment .comment-list ul.children {
+  @apply m-0 list-none pl-[65px];
+}
+
+.blog-comment .comment-box {
+  @apply relative mb-[60px] border-b border-solid border-b-[#f2f4f8] pb-[60px];
+}
+
+.blog-comment .comment {
+  @apply relative min-h-[90px];
+}
+
+.blog-comment .comment-box .author-thumb {
+  @apply absolute left-0 top-0 mb-5 h-[90px] w-[90px] overflow-hidden rounded-[50%];
+}
+
+.blog-comment .comment-box .author-thumb img {
+  @apply block h-[90px] w-[90px] rounded-[50%];
+}
+
+.blog-comment .comment-box .info {
+  @apply relative mb-[25px] leading-[24px];
+}
+
+.blog-comment .comment-box .info .name {
+  @apply relative block text-2xl font-extrabold uppercase leading-[30px] text-[#0f0d1d];
+}
+
+.blog-comment .comment-box .info .date {
+  @apply relative inline-block text-base font-semibold leading-[26px] text-main-color;
+}
+
+.blog-comment .comment-box .text {
+  @apply relative mb-[30px] block font-light leading-[1.5em] tracking-widest text-[#726f84];
+}
+
+.blog-comment .comment-box .reply-btn {
+  @apply relative block;
+}
+
+.blog-comment .comment-box .theme-btn .btn-title {
+  @apply px-[30px] pb-1 pt-1.5 leading-[30px];
+}
+
+.blog-comment .comment-body .says {
+  @apply hidden;
+}
+
+.blog-comment .comment-body {
+  @apply relative mb-[30px] pl-[100px];
+}
+
+.blog-comment .pingback .comment-body,
+.blog-comment .trackback .comment-body {
+  @apply ps-0;
+}
+
+.blog-comment .comment-body .avatar {
+  @apply absolute left-0 top-0 h-[85px] w-[85px] rounded-[5px];
+}
+
+.blog-comment .fn a,
+.blog-comment .fn {
+  @apply relative block text-[18px] leading-[1] text-heading-color no-underline;
+}
+
+.blog-comment .comment-body .comment-metadata {
+  @apply mb-[13px];
+}
+
+.blog-comment .comment-body .comment-metadata a {
+  @apply relative inline-block text-xs no-underline;
+}
+
+.blog-comment .comment-body .comment-metadata a:hover {
+  @apply text-[#0f0d1d];
+}
+
+.blog-comment .comment-body .comment-metadata .edit-link a::before {
+  @apply ml-2 mr-2.5 content-["."];
+}
+
+.blog-comment .comment-content p {
+  @apply relative mb-[30px] block font-body-font text-base font-light font-medium leading-[1.5em] leading-[2em] tracking-[0] text-[#726f84];
+}
+
+.blog-comment .comment-content table a {
+  @apply text-main-color no-underline;
+}
+
+.blog-comment .comment-content {
+  @apply font-medium;
+}
+
+.blog-comment .comment-content table a {
+  @apply text-[#0f0d1d];
+}
+
+.blog-comment .comment-content table a:hover {
+  @apply text-main-color;
+}
+
+.blog-comment .comment-content p:last-of-type {
+  @apply mb-0;
+}
+
+.blog-comment .reply a {
+  @apply relative mt-10 inline-block inline-flex h-[30px] items-center justify-center rounded-[30px] border-[none] bg-main-color px-[18px] py-0 text-center align-middle text-xs uppercase capitalize leading-[30px] text-white no-underline transition-all duration-500 ease-[ease];
+  -webkit-appearance: none;
+  outline: none !important;
+}
+
+.blog-admin {
+  @apply rounded-[5px] bg-[#f8f9fc] p-[30px];
+}
+.blog-admin p {
+  @apply mb-0;
+}
+
+@media (min-width: 992px) {
+  .blog-comment .reply a {
+    @apply absolute right-0 top-0 ml-0;
+  }
+}
+.blog-comment .reply a:hover {
+  @apply bg-[#0f0d1d] text-white;
+}
+
+.blog-comment .blog-pagination a,
+.blog-comment .blog-pagination span {
+  @apply mb-[45px];
+}
+
+.comment-respond .blog-details__content-title {
+  @apply mb-[50px];
+}
+
+.reply-form .logged-in-as {
+  @apply -ml-2.5 -mt-10 mb-5 flex text-main-color;
+}
+
+.reply-form .logged-in-as a {
+  @apply mx-2.5 no-underline;
+}
+
+.comment-form__title small {
+  @apply text-xl;
+}
+
+.comment-form__title small a {
+  @apply text-main-color underline no-underline;
+}
+
+.comment-form__title small a:hover {
+  @apply text-[#0f0d1d] opacity-50;
+}
+
+.comment-list .comment-respond {
+  @apply mb-[30px];
+}
+
+.reply-form .form-submit {
+  @apply mb-[0px];
+}
+
+.comment-list .reply-form .form-submit {
+  @apply mb-[30px];
+}
+
+/*# sourceMappingURL=blog.css.map */

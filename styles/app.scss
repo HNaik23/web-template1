@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Global
+    ## Global
+    ## Mixins
+    ## Theme
+    ## Variables
+    ## Common
+
+# Sections
+    ## Nav Bar
+    ## Banner
+    ## Brand Area
+    ## Footer
+    ## Widgets
+
+# Elements
+    ## accordion
+    ## filter
+    ## apartment
+    ## blog
+    ## city
+    ## feature
+    ## gallery
+    ## intro
+    ## main-search
+    ## pricing
+    ## service
+    ## team
+    ## user-list
+--------------------------------------------------------------*/
+
+/* ✅ 1. Move all `@use` rules to the top */
+@use "global/animate";
+@use "global/layout";
+@use "global/_variables";
+@use "global/_global";
+@use "global/_common";
+
+//== Pages
+//== Sections
+@use "sections/_section-title";
+@use "sections/_navbar";
+@use "sections/_banner";
+@use "sections/_about";
+@use "sections/_service";
+@use "sections/_project";
+@use "sections/_work-process";
+@use "sections/_team";
+@use "sections/_pricing";
+@use "sections/_case-study";
+@use "sections/_content";
+@use "sections/_testimonial";
+@use "sections/_section-style";
+@use "sections/_search";
+@use "sections/_widgets";
+@use "sections/_blog";
+@use "sections/_footer";
+@use "sections/home-new";
+
+// == responsive
+@use "responsive";
+
+// == color schemes
+@use "global/color-scheme";
+
+/* ✅ 2. Move all `@import` rules AFTER `@use` */
+// @import "animate.css/animate.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import "../vendor/css/nice-select.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+@import "../vendor/css/magnific.min.css";
+@import "../vendor/css/owl.min.css";
+
+/* ✅ 3. Tailwind (if needed) */
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
