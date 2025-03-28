@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
+    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+    <script>
+        // Function to remove the preloader after content is loaded
+        function hidePreloader() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+
+        // Fetch header and footer
+        Promise.all([
+            fetch('header.html').then(response => response.text()).then(data => {
+                document.getElementById('header').innerHTML = data;
+            }),
+            fetch('footer.html').then(response => response.text()).then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        ]).then(() => {
+            // Once both header and footer are loaded, hide preloader
+            hidePreloader();
+        }).catch(error => {
+            console.error("Error loading header/footer:", error);
+            hidePreloader(); // Ensure preloader is removed even if there's an error
+        });
+
+        // Fallback to remove preloader after a timeout (in case loading fails)
+        setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- page title start -->
+    <div class="breadcrumb-area bg-cover bg-center">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <div class="row justify-content-center">
+                    <div class="custom-md:w-1/2">
+                        <h2 class="page-title">Case Details</h2>
+                    </div>
+                    <div class="custom-md:w-1/2    custom-md:!text-end">
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Case Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page title end -->
+    <!-- service area start -->
+    <div class="service-area pd-top-120 pd-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="custom-md:w-1/3 w-full">
+                    <div class="td-sidebar service-sidebar wow animated fadeInUp" data-wow-duration="1s ">
+                        <div class="widget widget_info">
+                            <h5 class="widget-title"><i class="fas fa-arrow-right"></i> Project Info</h5>
+                            <div class="widget-info-inner">
+                                <h6>The BALCO v. National Hydroelectric Power Corporation (NHPC) case is a landmark
+                                    judgment by the Supreme Court of India that redefined the scope of arbitration law
+                                    in India.</h6>
+                                <!-- <p>Cakung, Jakarta</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-md:w-8/12">
+                    <div class="blog-details-page-content">
+                        <div class="single-blog-inner mb-0 wow animated fadeInUp" data-wow-duration="1s ">
+                            <div class="thumb">
+                                <img src="./images/service/7.png" alt="img">
+                            </div>
+                            <div class="details">
+                                <h4>Introduction</h4>
+                                <p>The case<b> Bharat Aluminium Co. (BALCO) v. National Hydroelectric Power Corporation
+                                        (NHPC)</b> is a landmark judgment in Indian arbitration law. This case clarified
+                                    the
+                                    <b>scope and applicability of Part I and Part II of the Arbitration and Conciliation
+                                        Act, 1996</b>, particularly concerning international commercial arbitration. The
+                                    Supreme
+                                    Court’s ruling in this case significantly impacted how India deals with arbitration
+                                    proceedings and foreign-seated arbitration awards.
+                                </p>
+                                <h4>Background</h4>
+                                <p>
+                                    Bharat Aluminium Co. Ltd. (BALCO), a leading aluminum manufacturing company in
+                                    India, entered into a contract with<b> National Hydroelectric Power Corporation
+                                        (NHPC)</b>
+                                    for the supply of aluminum conductor steel-reinforced (ACSR) cables. The contract
+                                    contained an<b> arbitration clause</b>, stipulating that disputes would be resolved
+                                    through
+                                    arbitration, with the seat of arbitration being <b>London, UK</b>.
+                                    <br>A dispute arose between BALCO and NHPC, leading to arbitration proceedings in
+                                    London. BALCO, however, sought relief from Indian courts under<b> Part I of the
+                                        Arbitration and Conciliation Act, 1996</b>, which allows Indian courts to
+                                    intervene in
+                                    arbitration proceedings. The key issue was whether Indian courts had jurisdiction
+                                    over foreign-seated arbitrations under Part I of the Act.
+                                </p>
+                                <h4>Legal Issues</h4>
+                                <p>
+                                <h5>The primary legal question in the case was:</h5>
+                                <p><b>
+                                        1. Does Part I of the Arbitration and Conciliation Act, 1996, apply to
+                                        foreign-seated arbitrations?
+                                        <br> 2. Can Indian courts grant interim relief in arbitrations seated outside
+                                        India?
+                                        <br> 3. Does the ruling in the case of Bhatia International v. Bulk Trading S.A.
+                                        (2002) apply to this case?
+
+                                    </b></p>
+                                </p>
+                                <h4>Judgment of the Supreme Court (2012)</h4>
+                                <p>
+                                    In a <b>five-judge bench ruling</b> in <b>2012</b>, the Supreme Court of India
+                                    overruled the
+                                    earlier precedent set in<b> Bhatia International v. Bulk Trading S.A. (2002)</b> and
+                                    held
+                                    that:
+                                    <br>1. <b>Part I of the Arbitration and Conciliation Act, 1996, does not apply to
+                                        arbitrations seated outside India</b>. This means that Indian courts cannot
+                                    intervene in
+                                    arbitration proceedings or grant interim relief in foreign-seated arbitrations.
+                                    <br>2. <b>Indian courts have no jurisdiction over foreign-seated arbitrations</b>
+                                    unless the
+                                    parties explicitly agree to subject themselves to Indian arbitration law.
+                                    <br>3. <b>Bhatia International was wrongly decided,</b> and its interpretation of
+                                    Part I
+                                    extending to foreign arbitrations was incorrect.
+                                    <br>The ruling in <b>BALCO v. NHPC</b> was made prospective in nature, meaning it
+                                    would only
+                                    apply to arbitration agreements signed after September 6, 2012, the date of the
+                                    judgment.
+
+                                </p>
+                                <h4>Impact of the Judgment</h4>
+                                <p>
+                                    The <b>BALCO judgment</b> had significant implications for arbitration law in India:
+                                    <br><b> 1. Strengthened India’s Pro-Arbitration Stance –</b> By aligning Indian
+                                    arbitration law with international standards, the ruling assured foreign investors
+                                    and businesses that arbitration agreements would be respected without excessive
+                                    court interference.
+                                    <br><b> 2. Limited Court Intervention –</b> Indian courts lost the power to
+                                    interfere in foreign-seated arbitrations, reducing judicial delays and reinforcing
+                                    the concept of “seat-centric” arbitration.
+                                    <br><b> 3. Encouraged Institutional Arbitration –</b> The ruling encouraged Indian
+                                    parties to choose institutional arbitration over ad hoc arbitration, improving
+                                    efficiency and credibility.
+                                    <br><b>4. Legislative Amendments –</b> The Arbitration and Conciliation (Amendment)
+                                    Act, 2015, was enacted to clarify ambiguities in arbitration laws and reinforce
+                                    BALCO’s principles.
+
+                                </p>
+                                <h4>Key Takeaways</h4>
+                                <p>
+                                    <b> 1. Jurisdiction in Arbitration –</b> The judgment clarified that Indian courts
+                                    have no jurisdiction over foreign-seated arbitrations unless expressly agreed by the
+                                    parties.
+                                    <br><b>2. Finality of Foreign Arbitration Awards –</b> It reinforced that
+                                    foreign-seated arbitration awards should be enforced without excessive judicial
+                                    interference.
+                                    <br><b>3. Reversal of Bhatia International Doctrine –</b> BALCO overruled Bhatia
+                                    International, making Indian arbitration law more aligned with global arbitration
+                                    practices.
+                                    <br><b>4. Legislative and Policy Changes –</b> Following BALCO, India introduced
+                                    several arbitration-friendly reforms to promote ease of doing business and attract
+                                    foreign investments.
+
+                                </p>
+                                <h4>Conclusion</h4>
+                                <p>The <b>BALCO v. NHPC</b> case marked a major shift in India’s arbitration landscape,
+                                    moving
+                                    towards <b>minimal judicial intervention in foreign-seated arbitrations</b>. By
+                                    reinforcing
+                                    the principles of party autonomy and finality of arbitration, the judgment
+                                    contributed to making India an arbitration-friendly jurisdiction. This case
+                                    continues to be a <b>foundational precedent</b> for arbitration law in India,
+                                    shaping
+                                    future legal and commercial arbitration disputes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service area end -->
+    <!-- footer area start -->
+    <div id="footer"></div>
+    <!-- footer area end -->
+</body>
+
+</html>

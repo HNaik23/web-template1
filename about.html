@@ -8,165 +8,41 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
    <script defer="defer" src="js/app.bundle.js"></script>
    <link href="css/app.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+   
    <!-- <script defer="defer" src="js/all.min.js"></script> -->
-
+   <script>
+      // Function to remove the preloader after content is loaded
+      function hidePreloader() {
+          document.getElementById('preloader').style.display = 'none';
+      }
+   
+      // Fetch header and footer
+      Promise.all([
+          fetch('header.html').then(response => response.text()).then(data => {
+              document.getElementById('header').innerHTML = data;
+          }),
+          fetch('footer.html').then(response => response.text()).then(data => {
+              document.getElementById('footer').innerHTML = data;
+          })
+      ]).then(() => {
+          // Once both header and footer are loaded, hide preloader
+          hidePreloader();
+      }).catch(error => {
+          console.error("Error loading header/footer:", error);
+          hidePreloader(); // Ensure preloader is removed even if there's an error
+      });
+   
+      // Fallback to remove preloader after a timeout (in case loading fails)
+      setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+   </script>
 </head>
 
 <body>
-   <!-- preloader area start -->
-   <div class="preloader" id="preloader">
-      <div class="preloader-inner">
-         <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-         </div>
-      </div>
-   </div>
-   <!-- preloader area end -->
-   <!-- search popup start-->
-   <div class="td-search-popup" id="td-search-popup">
-      <form action="index.html" class="search-form">
-         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search.....">
-         </div>
-         <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-      </form>
-   </div>
-   <!-- search popup end-->
-   <div class="body-overlay" id="body-overlay"></div>
-   <!-- navbar start -->
-   <nav class="navbar navbar-area navbar-expand-lg">
-      <div class="container nav-container navbar-bg">
-         <div class="responsive-mobile-menu">
-            <button class="menu toggle-btn block custom-md:hidden" data-target="#itech_main_menu" aria-expanded="false"
-               aria-label="Toggle navigation">
-               <span class="icon-left"></span>
-               <span class="icon-right"></span>
-            </button>
-         </div>
-         <div class="logo">
-            <a href="index.html"><img src="./images/logo.png" alt="img"></a>
-         </div>
-         <div class="nav-right-part nav-right-part-mobile">
-            <a class="search-bar-btn" href="index.html">
-               <i class="fa fa-search"></i>
-            </a>
-         </div>
-         <div class="collapse navbar-collapse" id="itech_main_menu">
-            <ul class="navbar-nav menu-open   custom-md:!text-end">
-               <li class="menu-item-has-children">
-                  <a href="index.html">Home</a>
-                  <ul class="sub-menu">
-                     <li><a href="index.html">Software Agency</a></li>
-                     <li><a href="index-2.html">SaaS App Landing</a></li>
-                     <li><a href="index-3.html">Payments Solution</a></li>
-                     <li><a href="index-4.html">Startup / Software Company</a></li>
-                     <li><a href="index-5.html">Artificial Intelligence</a></li>
-                     <li><a href="index-6.html">NFT Service</a></li>
-                     <li><a href="index-7.html">Cyber Security</a></li>
-                     <li><a href="index-8.html">Hardware Service</a></li>
-                     <li><a href="index-9.html">ICO Landing</a></li>
-                     <li><a href="index-10.html">Personal Portfolio</a></li>
-                     <li><a href="index-11.html">SEO Service</a></li>
-                     <li><a href="index-12.html">Business Consultancy</a></li>
-                     <li><a href="index-13.html">IT Solution</a></li>
-                     <li><a href="index-14.html">IT Agency Two</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Service</a>
-                  <ul class="sub-menu">
-                     <li><a href="service.html">Service 01</a></li>
-                     <li><a href="service-2.html">Service 02</a></li>
-                     <li><a href="service-3.html">Service 03</a></li>
-                     <li><a href="service-4.html">Service 04</a></li>
-                     <li><a href="service-5.html">Service 05</a></li>
-                     <li><a href="service-details.html">Service Single</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Pages</a>
-                  <ul class="sub-menu">
-                     <li><a href="about.html">About Us</a></li>
-                     <li><a href="team.html">Team 01</a></li>
-                     <li><a href="team-2.html">Team 02</a></li>
-                     <li><a href="team-3.html">Team 03</a></li>
-                     <li><a href="team-details.html">Team Details</a></li>
-                     <li><a href="pricing.html">Pricing 01</a></li>
-                     <li><a href="pricing-2.html">Pricing 02</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children mega-menu">
-                  <a href="index.html">Mega Menu</a>
-                  <div class="sub-menu">
-                     <div class="row">
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="index.html">Software Agency</a></li>
-                              <li><a href="index-2.html">SaaS App Landing</a></li>
-                              <li><a href="index-3.html">Payments Solution</a></li>
-                              <li><a href="index-4.html">Startup / Software Company</a></li>
-                              <li><a href="index-5.html">Artificial Intelligence</a></li>
-                              <li><a href="index-6.html">NFT Service</a></li>
-                              <li><a href="index-7.html">Cyber Security</a></li>
-                              <li><a href="index-8.html">Hardware Service</a></li>
-                              <li><a href="index-9.html">ICO Landing</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="service.html">Service 01</a></li>
-                              <li><a href="service-2.html">Service 02</a></li>
-                              <li><a href="service-3.html">Service 03</a></li>
-                              <li><a href="service-4.html">Service 04</a></li>
-                              <li><a href="service-5.html">Service 05</a></li>
-                              <li><a href="service-details.html">Service Single</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="project.html">Project 01</a></li>
-                              <li><a href="project-2.html">Project 02</a></li>
-                              <li><a href="project-3.html">Project 03</a></li>
-                              <li><a href="project-details.html">Case Study Details</a></li>
-                              <li><a href="pricing.html">Pricing 01</a></li>
-                              <li><a href="pricing-2.html">Pricing 02</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="about.html">About Us</a></li>
-                              <li><a href="team.html">Team 01</a></li>
-                              <li><a href="team-2.html">Team 02</a></li>
-                              <li><a href="team-3.html">Team 03</a></li>
-                              <li><a href="team-details.html">Team Details</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Blog</a>
-                  <ul class="sub-menu">
-                     <li><a href="blog.html">Blog 01</a></li>
-                     <li><a href="blog-2.html">Blog 02</a></li>
-                     <li><a href="blog-3.html">Blog 03</a></li>
-                     <li><a href="blog-4.html">Blog 04</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul>
-               </li>
-               <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-         </div>
-         <div class="nav-right-part nav-right-part-desktop self-center"><a class="btn btn-border-base"
-            href="login36.html">Login <i class="fa fa-plus"></i></a></div>
-       </div>
-      </div>
-   </nav>
-   <!-- navbar end -->
+   <div id="header"></div>
    <!-- page title start -->
    <div class="breadcrumb-area bg-cover bg-center">
       <div class="container">
@@ -178,7 +54,7 @@
                <div class="custom-md:w-1/2    custom-md:!text-end">
                   <ul class="page-list">
                      <li><a href="index.html">Home</a></li>
-                     <li>Blog Post</li>
+                     <li>About</li>
                   </ul>
                </div>
             </div>
@@ -203,8 +79,9 @@
                <div class="section-title wow animated fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.3s">
                   <h6 class="sub-title">ABOUT US</h6>
                   <h2 class="title">IT is a critical component of <span>modern</span> businesses</h2>
-                  <p class="content !mb-[24px] custom-lg:!mb-[48px]">Lorem Ipsum is simply dummy text of the printing
-                     and typesetting industry Loreaim Ipsum has been the industry's standard dummy</p>
+                  <p class="content !mb-[24px] custom-lg:!mb-[48px]">
+                     We are a dedicated online platform providing expert arbitration consultation, helping businesses and individuals resolve disputes efficiently and amicably.
+                  </p>
                   <div class="row">
                      <div class="custom-sm:w-1/2">
                         <div class="single-about-inner">
@@ -212,9 +89,8 @@
                               <img src="./images/icon/2.png" alt="img">
                            </div>
                            <div class="details">
-                              <h5>Our Ambition</h5>
-                              <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi
-                                 designer is our country.</p>
+                              <h5>Swift Effective Resolutions</h5>
+                              <p style="font-size: 14px;">Set the dispute effectively without lenghty court proceedings.</p>
                            </div>
                         </div>
                      </div>
@@ -224,9 +100,8 @@
                               <img src="./images/icon/3.png" alt="img">
                            </div>
                            <div class="details">
-                              <h5>Our Ambition</h5>
-                              <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi
-                                 designer is our country.</p>
+                              <h5>Legally Enforces Solutions</h5>
+                              <p style="font-size: 14px;">Ensure binding & fair agreements backed by legal expertises</p>
                            </div>
                         </div>
                      </div>
@@ -239,11 +114,11 @@
    <!-- about area end -->
    <!-- service area start -->
    <div class="service-area bg-relative pd-top-100">
-      <img class="position-bottom-left animate-topImageBounce" src="./images/icon/4.png" alt="img">
+      <img class="position-top-left animate-topImageBounce" src="./images/icon/4.png" alt="img">
       <div class="container">
          <div class="section-title text-center wow animated fadeInUp" data-wow-duration="0.8s">
-            <h6 class="sub-title">CREATIVE SERVICES</h6>
-            <h2 class="title">Your Partner In <span>Digital</span> Success</h2>
+            <h6 class="sub-title">TAILORED SERVICE</h6>
+            <h2 class="title">Your Trusted Partner in <span>Fair & Effective Dispute </span> Resolution</h2>
          </div>
          <div class="row">
             <div class="custom-md:w-1/3 custom-sm:w-1/2">
@@ -252,11 +127,15 @@
                      <img src="./images/service-icon/1.png" alt="img">
                   </div>
                   <div class="details">
-                     <h5><a href="service-details.html">Mobile App Development</a></h5>
-                     <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is
-                        Ipsum is</p>
-                     <a class="btn btn-border-base" href="service-details.html">Touch More <i
-                           class="fa fa-plus"></i></a>
+                     <h5>Swift & Effective Resolutions</h5>
+                     <p>We prioritize timely outcomes to prevent prolonged conflicts. </p>
+                     <!-- <a href="service-details.html"> -->
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg> -->
                   </div>
                </div>
             </div>
@@ -267,11 +146,14 @@
                      <img src="./images/service-icon/2.png" alt="img">
                   </div>
                   <div class="details">
-                     <h5><a href="service-details.html">Content Marketing</a></h5>
-                     <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is
-                        Ipsum is</p>
-                     <a class="btn btn-border-base" href="service-details.html">Touch More <i
-                           class="fa fa-plus"></i></a>
+                     <h5>Confidential & Impartial Services</h5>
+                     <p>Your privacy and fairness are at the core of our process. </p>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg> -->
                   </div>
                </div>
             </div>
@@ -282,14 +164,80 @@
                      <img src="./images/service-icon/3.png" alt="img">
                   </div>
                   <div class="details">
-                     <h5><a href="service-details.html">E-commerce Solutions</a></h5>
-                     <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is
-                        Ipsum is</p>
-                     <a class="btn btn-border-base" href="service-details.html">Touch More <i
-                           class="fa fa-plus"></i></a>
+                     <h5>Experienced ADR Professionals</h5>
+                     <p>- Our panel consists of seasoned legal experts, retired judges, and industry specialists. </p>
+                     <!-- <a href="service-details.html">
+                        Get Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg>
+                     </a> -->
                   </div>
                </div>
             </div>
+            <div class="custom-md:w-1/3 custom-sm:w-1/2">
+               <div class="single-service-inner text-center wow animated fadeInUp" data-wow-duration="0.8s">
+                  <div class="thumb">
+                     <img src="./images/service-icon/1.png" alt="img">
+                  </div>
+                  <div class="details">
+                     <h5>Tailored Solutions for Every Industry</h5>
+                     <p>We customize our approach based on the nature of the dispute.</p>
+                     <!-- <a href="service-details.html">
+                        Get Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg>
+                     </a> -->
+                  </div>
+               </div>
+            </div>
+            <div class="custom-md:w-1/3 custom-sm:w-1/2">
+               <div class="single-service-inner text-center wow animated fadeInUp" data-wow-duration="0.8s">
+                  <div class="thumb">
+                     <img src="./images/service-icon/1.png" alt="img">
+                  </div>
+                  <div class="details">
+                     <h5>Global Reach, Local Expertise</h5>
+                     <p>Our network of professionals ensures effective dispute resolution across borders.</p>
+                     <!-- <a href="service-details.html">
+                        Get Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg>
+                     </a> -->
+                  </div>
+               </div>
+            </div>
+            <div class="custom-md:w-1/3 custom-sm:w-1/2">
+               <div class="single-service-inner text-center wow animated fadeInUp" data-wow-duration="0.8s">
+                  <div class="thumb">
+                     <img src="./images/service-icon/1.png" alt="img">
+                  </div>
+                  <div class="details">
+                     <h5>Swift & Effective Resolutions</h5>
+                     <p>We prioritize timely outcomes to prevent prolonged conflicts. </p>
+                     <!-- <a href="service-details.html">
+                        Get Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+                           <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+                           <path
+                              d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM-4.85367e-08 10.75L25.903 10.75L25.903 9.25L4.85367e-08 9.25L-4.85367e-08 10.75Z"
+                              fill="#246BFD" />
+                        </svg>
+                     </a> -->
+                  </div>
+               </div>
+            </div>  
          </div>
       </div>
    </div>
@@ -307,24 +255,26 @@
             <div class="custom-md:w-7/12 wow animated fadeInUp" data-wow-duration="0.8s">
                <div class="section-title mb-0 mt-[24px] custom-md:mt-0">
                   <h6 class="sub-title">SOME FAQ'S</h6>
-                  <h2 class="title">Creating <span>digital</span> masterpieces</h2>
-                  <p class="content">It is a long established fact that a reader will be distr acted bioiiy the end gail
-                     designa readable content of a page when looking.</p>
+                  <h2 class="title" style="font-size: 35px;">Resolving <span>disputes with</span> expertise. </h2>
+                  <p class="content">
+                     Our goal is to provide seamless, efficient, and enforceable arbitration solutions, ensuring fair and effective dispute resolution for businesses and individuals alike.
+                  </p>
                </div>
                <div class="accordion accordion-inner style-2 accordion-icon-left mt-[16px]" id="accordionExample">
                   <div class="accordion-item">
                      <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           What services do you offer?
+                           What is arbitration? 
                         </button>
                      </h2>
                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
 
-                           <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
-                              model text, search for 'lorem ipsum' will uncover</p>
+                           <p>
+                              Arbitration is a private dispute resolution process where an impartial arbitrator makes a binding decision based on presented evidence and arguments.
+                           </p>
                         </div>
                      </div>
                   </div>
@@ -332,14 +282,13 @@
                      <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                           How long does it take for you to complete a project?
+                           What is mediation?
                         </button>
                      </h2>
                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                           <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
-                              model text, search for 'lorem ipsum' will uncover</p>
+                           <p>Mediation is a voluntary process where a neutral mediator helps parties negotiate a mutually acceptable agreement without imposing a decision.</p>
                         </div>
                      </div>
                   </div>
@@ -347,14 +296,41 @@
                      <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                           How much does it cost to work with your agency?
+                           What are the benefits of ADR? 
                         </button>
                      </h2>
                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                           <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
-                              model text, search for 'lorem ipsum' will uncover</p>
+                           <p>ADR is typically faster, more cost-effective, confidential, and less adversarial compared to traditional court proceedings.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           Is an arbitration decision legally binding? 
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>Yes, arbitration awards are legally binding and enforceable under national and international arbitration laws.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           What industries benefit from ADR?  
+                        </button>
+                     </h2>
+                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>ADR is widely used in commercial, corporate, construction, intellectual property, labor, and consumer disputes.</p>
                         </div>
                      </div>
                   </div>
@@ -365,7 +341,7 @@
    </div>
    <!-- faq area end -->
    <!-- team area start -->
-   <div class="team-area bg-relative pd-top-120 pd-bottom-90">
+   <!-- <div class="team-area bg-relative pd-top-120 pd-bottom-90">
       <div class="container">
          <div class="section-title text-center wow animated fadeInUp" data-wow-duration="0.8s">
             <h6 class="sub-title">MEET OUR EXPERTS</h6>
@@ -424,46 +400,49 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
    <!-- team area end -->
    <!-- counter area start -->
    <div class="counter-area bg-relative bg-cover bg-center pd-top-110 pd-bottom-100">
       <div class="container pd-bottom-90">
          <div class="row">
-            <div class="custom-md:w-1/4">
-               <div class="single-counter-inner wow animated fadeInUp" data-wow-duration="0.8s">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animated fadeInUp" data-wow-duration="0.8s">
+               <div class="single-counter-inner">
                   <div class="thumb">
                      <img src="./images/icon/5.svg" alt="img">
                   </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">500</span>+</h2>
+                  <p class="text-white" style="font-size: 14px;">Sucessful Arbitration Cases Resolved</p>
                </div>
             </div>
-            <div class="custom-md:w-1/4">
-               <div class="single-counter-inner wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animated fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.3s">
+               <div class="single-counter-inner">
                   <div class="thumb">
                      <img src="./images/icon/6.svg" alt="img">
                   </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">10</span>k+</h2>
-                  <p class="text-white">Team member</p>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">1000</span>+</h2>
+                  <p class="text-white" style="font-size: 14px;">Satisfied Clients</p>
                </div>
             </div>
-            <div class="custom-md:w-1/4">
-               <div class="single-counter-inner wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animated fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.6s">
+               <div class="single-counter-inner">
                   <div class="thumb">
                      <img src="./images/icon/7.svg" alt="img">
                   </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">10</span>+</h2>
+                  <p class="text-white" style="font-size: 14px;">Years of Expertise in Dispute Resolution</p>
                </div>
             </div>
-            <div class="custom-md:w-1/4">
-               <div class="single-counter-inner wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animated fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.9s">
+               <div class="single-counter-inner">
                   <div class="thumb">
                      <img src="./images/icon/8.svg" alt="img">
                   </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">95</span>%</h2>
+                  <p class="text-white" style="font-size: 14px;">Settlement Success Ratio</p>
                </div>
             </div>
          </div>
@@ -484,8 +463,9 @@
                   <div class="section-title mb-0 wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                      <h6 class="sub-title">GET IN TOUCH</h6>
                      <h2 class="title">Bringing Your <span>Vision</span> To Life</h2>
-                     <p class="content">For your car we will do everything advice design in us repairs and maintenance.
-                        We are the some preferred.</p>
+                     <p class="content">
+                        For expert guidance in arbitration, from consultation to resolution,we’re here to help - Contact us today!
+                     </p>
                      <form class="mt-[24px]">
                         <div class="row">
                            <div class="custom-md:w-1/2">
@@ -530,205 +510,50 @@
       <div class="container">
          <div class="section-title text-center wow animated fadeInUp" data-wow-duration="0.8s">
             <h6 class="sub-title">OUR SIMPLE PROCESS</h6>
-            <h2 class="title">World <span>Best Step</span> Our It Process</h2>
+            <h2 class="title">Resolve <span>Dispute Seemlessly </span> In Just 3 Simple Steps</h2>
          </div>
-         <div class="row">
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
+         <div class="row flex justify-center items-center w-full text-center gap-x-8">
+            <div class="custom-md:w-1/3 custom-sm:w-1/2 mx-auto">
                <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s">
                   <div class="thumb mb-[16px]">
                      <img src="./images/icon/9.svg" alt="img">
                   </div>
                   <div class="details">
-                     <p class="process-count">Work 01</p>
-                     <h5 class="!mb-[16px]">Software Research</h5>
-                     <p class="content">Research ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>
+                     <p class="process-count">Step 01</p>
+                     <h5 class="!mb-[16px]">Consultation</h5>
+                     <p class="content">Share your dispute details with our experts for a tailored arbitration strategy.</p>
                   </div>
                </div>
             </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.3s">
+            <div class="custom-md:w-1/3 custom-sm:w-1/2 mx-auto">
+               <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                   <div class="thumb mb-[16px]">
                      <img src="./images/icon/10.svg" alt="img">
                   </div>
                   <div class="details">
-                     <p class="process-count">Work 02</p>
-                     <h5 class="!mb-[16px]">Create Programs</h5>
-                     <p class="content">Create ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>
+                     <p class="process-count">Step 02</p>
+                     <h5 class="!mb-[16px]">Mediation & Arbitration</h5>
+                     <p class="content">Engage in structured discussions and legal arbitration for a fair resolution.</p>
                   </div>
                </div>
             </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.6s">
+            <div class="custom-md:w-1/3 custom-sm:w-1/2 mx-auto">
+               <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                   <div class="thumb mb-[16px]">
                      <img src="./images/icon/11.svg" alt="img">
                   </div>
                   <div class="details">
-                     <p class="process-count">Work 03</p>
-                     <h5 class="!mb-[16px]">Develope Software</h5>
-                     <p class="content">Develope ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>
-                  </div>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.9s">
-                  <div class="thumb mb-[16px]">
-                     <img src="./images/icon/12.svg" alt="img">
-                  </div>
-                  <div class="details">
-                     <p class="process-count">Work 04</p>
-                     <h5 class="!mb-[16px]">Shop software</h5>
-                     <p class="content">Shop ipsum dolor sit consec tetur Malesuada sed diam in the aliquam tempor</p>
+                     <p class="process-count">Step 03</p>
+                     <h5 class="!mb-[16px]">Enforcement & Closure</h5>
+                     <p class="content">Ensure the enforceability of the decision and move forward with confidence.</p>
                   </div>
                </div>
             </div>
          </div>
+         
       </div>
    </div>
-   <!-- work-process-area end -->
-   <!-- footer area start -->
-   <footer class="footer-area bg-black bg-cover bg-center">
-      <div class="footer-subscribe">
-         <div class="container">
-            <div class="footer-subscribe-inner bg-cover bg-center wow animated fadeInUp" data-wow-duration="0.8s">
-               <div class="row">
-                  <div class="custom-md:w-1/2">
-                     <h2 class="custom-md:mb-0 mb-[16px]">Subscribe To Our Newsletter</h2>
-                  </div>
-                  <div class="custom-md:w-1/2 self-center   custom-md:!text-end">
-                     <input type="text" placeholder="Your e-mail address">
-                     <a class="btn btn-black border-radius-0" href="index.html">Submit now</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_about wow animated fadeInUp" data-wow-duration="0.8s">
-                  <div class="thumb">
-                     <img src="./images/logo2.png" alt="img">
-                  </div>
-                  <div class="details">
-                     <p>Melbourne is simply is dumiomy is text Lorem Ipsum is simply</p>
-                     <p class="mt-[16px]"><i class="fa fa-phone-alt"></i> (+888) 123 456 765</p>
-                     <p class="mt-[8px]"><i class="fas fa-envelope"></i> (+888) 123 456 765</p>
-                     <ul class="social-media">
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-twitter"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <h4 class="widget-title">Our Service</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Ui Design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Digital marketing </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Video Editing</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Pc Repairs</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web Development</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                  <h4 class="widget-title">Pay links</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget-recent-post wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.9s">
-                  <h4 class="widget-title">Contact us</h4>
-                  <ul>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/1.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0"><a href="blog-details.html">Social Media For Promote Business.</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/2.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0">
-                                 <a href="blog-details.html">Marketing For Base market watch</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="footer-bottom !border-[rgba(50,47,47,1)]">
-         <div class="container">
-            <div class="row">
-               <div class="custom-sm:w-1/2 self-center">
-                  <p>© AgileTech 2025 | All Rights Reserved</p>
-               </div>
-               <div class="custom-sm:w-1/2   custom-md:!text-end">
-                  <a href="index.html">Terms & Condition</a>
-                  <a href="index.html">Privacy Policy</a>
-                  <a href="index.html">Contact Us</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
-   <!-- footer area end -->
-   <!-- back to top area start -->
-   <div class="back-to-top">
-      <span class="back-top"><i class="fa fa-angle-up"></i></span>
-   </div>
-   <!-- back to top area end -->
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-      crossorigin="anonymous" referrerpolicy="no-referrer">
-
+   <div id="footer"></div>
 </body>
 
 </html>

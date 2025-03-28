@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
+    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+    <script>
+        // Function to remove the preloader after content is loaded
+        function hidePreloader() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+
+        // Fetch header and footer
+        Promise.all([
+            fetch('header.html').then(response => response.text()).then(data => {
+                document.getElementById('header').innerHTML = data;
+            }),
+            fetch('footer.html').then(response => response.text()).then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        ]).then(() => {
+            // Once both header and footer are loaded, hide preloader
+            hidePreloader();
+        }).catch(error => {
+            console.error("Error loading header/footer:", error);
+            hidePreloader(); // Ensure preloader is removed even if there's an error
+        });
+
+        // Fallback to remove preloader after a timeout (in case loading fails)
+        setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- page title start -->
+    <div class="breadcrumb-area bg-cover bg-center">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <div class="row justify-content-center">
+                    <div class="custom-md:w-1/2">
+                        <h2 class="page-title">Case Details</h2>
+                    </div>
+                    <div class="custom-md:w-1/2    custom-md:!text-end">
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Case Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page title end -->
+    <!-- service area start -->
+    <div class="service-area pd-top-120 pd-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="custom-md:w-1/3 w-full">
+                    <div class="td-sidebar service-sidebar wow animated fadeInUp" data-wow-duration="1s ">
+                        <div class="widget widget_info">
+                            <h5 class="widget-title"><i class="fas fa-arrow-right"></i> Project Info</h5>
+                            <div class="widget-info-inner">
+                                <h6>The case S.B.I. Home Finance Ltd. v. D.S. Kulkarni Developers Ltd. revolves around a
+                                    financial dispute between a housing finance company (SBI Home Finance Ltd.) and a
+                                    real estate developer (D.S. Kulkarni Developers Ltd.) regarding loan repayment and
+                                    contractual obligations.</h6>
+                                <!-- <p>Cakung, Jakarta</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-md:w-8/12">
+                    <div class="blog-details-page-content">
+                        <div class="single-blog-inner mb-0 wow animated fadeInUp" data-wow-duration="1s ">
+                            <div class="thumb">
+                                <img src="./images/service/7.png" alt="img">
+                            </div>
+                            <div class="details">
+                                <h4>Introduction</h4>
+                                <p>The case <b>S.B.I. Home Finance Ltd. v. D.S. Kulkarni Developers Ltd.</b> is a
+                                    significant
+                                    legal dispute in the realm of financial agreements, loan recovery, and insolvency
+                                    laws in India. This case revolves around a financial dispute between<b>SBI Home
+                                        Finance Ltd. (SBIHFL) and D.S. Kulkarni Developers Ltd. (DSKDL)</b> , involving
+                                    allegations of loan defaults, fraudulent transactions, and legal challenges related
+                                    to debt recovery mechanisms.
+                                </p>
+                                <h4>Background</h4>
+                                <p>
+                                    SBI Home Finance Ltd., a subsidiary of the <b>State Bank of India (SBI)</b>, is
+                                    engaged in
+                                    providing home loans and housing finance solutions. <b>D.S. Kulkarni Developers Ltd.
+                                        (DSKDL)</b> is a well-known real estate company that was involved in various
+                                    residential
+                                    and commercial infrastructure projects in India.
+                                    <br>DSKDL secured loans from SBIHFL for multiple real estate projects. However, due
+                                    to
+                                    financial distress, the company allegedly defaulted on loan repayments, leading to
+                                    legal proceedings initiated by SBIHFL to recover outstanding dues.
+
+                                </p>
+                                <h4>Legal Issues</h4>
+                                <p>
+                                    One of the primary legal issues in the case was the<b> loan default and debt
+                                        recovery,</b>
+                                    where SBIHFL sought to recover its dues from DSKDL, claiming that the company had
+                                    failed to meet its repayment obligations. The case also examined whether DSKDL had
+                                    <b>breached financial agreements </b>signed with SBIHFL.
+                                    <br>Another significant aspect of the case was<b> allegations of fraudulent
+                                        transactions</b>,
+                                    where SBIHFL accused DSKDL of diverting funds and misusing borrowed capital, raising
+                                    concerns about financial mismanagement. Additionally, the case brought into question
+                                    the <b>applicability of insolvency laws</b> under the <b>Insolvency and Bankruptcy
+                                        Code (IBC),
+                                        2016</b>, as SBIHFL sought to initiate insolvency proceedings against DSKDL.
+
+                                </p>
+                                <h4>Court Proceedings and Judgment</h4>
+                                <p>
+                                    The legal battle began at the <b>Debt Recovery Tribunal (DRT)</b>, where SBIHFL
+                                    approached
+                                    the tribunal for loan recovery. The DRT examined financial records and loan
+                                    agreements to assess the legitimacy of SBIHFL's claims.
+                                    <br> Subsequently, the case was escalated to the <b>National Company Law Tribunal
+                                        (NCLT)</b>,
+                                    where SBIHFL filed an insolvency petition against DSKDL under the IBC, 2016. The
+                                    NCLT was tasked with determining whether DSKDL should be subjected to corporate
+                                    insolvency resolution proceedings.
+                                    <br> Eventually, the dispute reached the higher judicial authorities, including the
+                                    <b>Supreme Court of India</b>, where legal interpretations related to financial
+                                    mismanagement, investor protection, and corporate debt restructuring were
+                                    extensively analyzed.
+                                </p>
+                                <h4>Key Legal Findings</h4>
+                                <p>
+                                    One of the crucial findings of the court was that <b>loan agreements must be
+                                        honored</b>,
+                                    reinforcing that financial institutions must be repaid as per contractual terms. The
+                                    ruling also highlighted the <b>importance of corporate governance and financial
+                                        transparency</b>, emphasizing that real estate developers should maintain
+                                    accountability
+                                    in financial dealings.
+                                    <br>Additionally, the court upheld the application of insolvency proceedings,
+                                    clarifying
+                                    that companies failing to meet financial obligations could be subjected to
+                                    <b>corporate
+                                        insolvency resolution processes (CIRP) under the IBC, 2016</b>. The judgment
+                                    also
+                                    stressed the protection of lenders' interests, ensuring that financial institutions
+                                    have legal safeguards against loan defaults.
+                                </p>
+                                <h4>Impact of the Judgment</h4>
+                                <p>
+                                    The ruling had a significant impact on debt recovery mechanisms, reinforcing that
+                                    financial institutions can seek legal remedies through platforms such as the<b>DRT,
+                                        NCLT, and IBC</b>. It also led to <b>increased scrutiny</b> on real estate
+                                    developers,
+                                    prompting stricter financial regulations to prevent loan misuse.
+                                    <br>Furthermore, the judgment helped <b>enhance investor confidence</b>, as it
+                                    reassured
+                                    lenders and investors that the legal system provides protection against fraudulent
+                                    corporate practices.
+                                </p>
+                                <h4>Conclusion</h4>
+                                <p>The<b> S.B.I. Home Finance Ltd. v. D.S. Kulkarni Developers Ltd.</b> case is a
+                                    landmark
+                                    ruling in financial and insolvency law. It underscores the importance of honoring
+                                    loan agreements, ensuring corporate accountability, and strengthening the legal
+                                    framework for debt recovery.
+                                    <br> By setting a precedent for due diligence, financial discipline, and adherence
+                                    to
+                                    legal and regulatory frameworks, this case serves as a <b>cautionary tale</b> for
+                                    businesses and financial institutions engaged in corporate lending and borrowing
+                                    activities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service area end -->
+    <!-- footer area start -->
+    <div id="footer"></div>
+    <!-- footer area end -->
+</body>
+
+</html>

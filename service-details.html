@@ -8,164 +8,67 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
    <script defer="defer" src="js/app.bundle.js"></script>
    <link href="css/app.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+   <script>
+      // Function to remove the preloader after content is loaded
+      function hidePreloader() {
+         document.getElementById('preloader').style.display = 'none';
+      }
+
+      // Fetch header and footer
+      Promise.all([
+         fetch('header.html').then(response => response.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+         }),
+         fetch('footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+         })
+      ]).then(() => {
+         // Once both header and footer are loaded, hide preloader
+         hidePreloader();
+      }).catch(error => {
+         console.error("Error loading header/footer:", error);
+         hidePreloader(); // Ensure preloader is removed even if there's an error
+      });
+
+      // Fallback to remove preloader after a timeout (in case loading fails)
+      setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+   </script>
+
 </head>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".service-link");
+      const sections = document.querySelectorAll(".service-details");
+
+      // Show all service details by default
+      sections.forEach(section => section.style.display = "block");
+
+      links.forEach(link => {
+         link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Show all sections first before filtering
+            sections.forEach(section => section.style.display = "block");
+
+            // Get the target section and show only it
+            const targetId = this.getAttribute("data-target");
+            sections.forEach(section => {
+               if (section.id !== targetId) {
+                  section.style.display = "none";
+               }
+            });
+         });
+      });
+   });
+</script>
 
 <body>
-   <!-- preloader area start -->
-   <div class="preloader" id="preloader">
-      <div class="preloader-inner">
-         <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-         </div>
-      </div>
-   </div>
-   <!-- preloader area end -->
-   <!-- search popup start-->
-   <div class="td-search-popup" id="td-search-popup">
-      <form action="index.html" class="search-form">
-         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search.....">
-         </div>
-         <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-      </form>
-   </div>
-   <!-- search popup end-->
-   <div class="body-overlay" id="body-overlay"></div>
-   <!-- navbar start -->
-   <nav class="navbar navbar-area navbar-expand-lg">
-      <div class="container nav-container navbar-bg">
-         <div class="responsive-mobile-menu">
-            <button class="menu toggle-btn block custom-md:hidden" data-target="#itech_main_menu" aria-expanded="false"
-               aria-label="Toggle navigation">
-               <span class="icon-left"></span>
-               <span class="icon-right"></span>
-            </button>
-         </div>
-         <div class="logo">
-            <a href="index.html"><img src="./images/logo.png" alt="img"></a>
-         </div>
-         <div class="nav-right-part nav-right-part-mobile">
-            <a class="search-bar-btn" href="index.html">
-               <i class="fa fa-search"></i>
-            </a>
-         </div>
-         <div class="collapse navbar-collapse" id="itech_main_menu">
-            <ul class="navbar-nav menu-open   custom-md:!text-end">
-               <li class="menu-item-has-children">
-                  <a href="index.html">Home</a>
-                  <ul class="sub-menu">
-                     <li><a href="index.html">Software Agency</a></li>
-                     <li><a href="index-2.html">SaaS App Landing</a></li>
-                     <li><a href="index-3.html">Payments Solution</a></li>
-                     <li><a href="index-4.html">Startup / Software Company</a></li>
-                     <li><a href="index-5.html">Artificial Intelligence</a></li>
-                     <li><a href="index-6.html">NFT Service</a></li>
-                     <li><a href="index-7.html">Cyber Security</a></li>
-                     <li><a href="index-8.html">Hardware Service</a></li>
-                     <li><a href="index-9.html">ICO Landing</a></li>
-                     <li><a href="index-10.html">Personal Portfolio</a></li>
-                     <li><a href="index-11.html">SEO Service</a></li>
-                     <li><a href="index-12.html">Business Consultancy</a></li>
-                     <li><a href="index-13.html">IT Solution</a></li>
-                     <li><a href="index-14.html">IT Agency Two</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Service</a>
-                  <ul class="sub-menu">
-                     <li><a href="service.html">Service 01</a></li>
-                     <li><a href="service-2.html">Service 02</a></li>
-                     <li><a href="service-3.html">Service 03</a></li>
-                     <li><a href="service-4.html">Service 04</a></li>
-                     <li><a href="service-5.html">Service 05</a></li>
-                     <li><a href="service-details.html">Service Single</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Pages</a>
-                  <ul class="sub-menu">
-                     <li><a href="about.html">About Us</a></li>
-                     <li><a href="team.html">Team 01</a></li>
-                     <li><a href="team-2.html">Team 02</a></li>
-                     <li><a href="team-3.html">Team 03</a></li>
-                     <li><a href="team-details.html">Team Details</a></li>
-                     <li><a href="pricing.html">Pricing 01</a></li>
-                     <li><a href="pricing-2.html">Pricing 02</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children mega-menu">
-                  <a href="index.html">Mega Menu</a>
-                  <div class="sub-menu">
-                     <div class="row">
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="index.html">Software Agency</a></li>
-                              <li><a href="index-2.html">SaaS App Landing</a></li>
-                              <li><a href="index-3.html">Payments Solution</a></li>
-                              <li><a href="index-4.html">Startup / Software Company</a></li>
-                              <li><a href="index-5.html">Artificial Intelligence</a></li>
-                              <li><a href="index-6.html">NFT Service</a></li>
-                              <li><a href="index-7.html">Cyber Security</a></li>
-                              <li><a href="index-8.html">Hardware Service</a></li>
-                              <li><a href="index-9.html">ICO Landing</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="service.html">Service 01</a></li>
-                              <li><a href="service-2.html">Service 02</a></li>
-                              <li><a href="service-3.html">Service 03</a></li>
-                              <li><a href="service-4.html">Service 04</a></li>
-                              <li><a href="service-5.html">Service 05</a></li>
-                              <li><a href="service-details.html">Service Single</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="project.html">Project 01</a></li>
-                              <li><a href="project-2.html">Project 02</a></li>
-                              <li><a href="project-3.html">Project 03</a></li>
-                              <li><a href="project-details.html">Case Study Details</a></li>
-                              <li><a href="pricing.html">Pricing 01</a></li>
-                              <li><a href="pricing-2.html">Pricing 02</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="about.html">About Us</a></li>
-                              <li><a href="team.html">Team 01</a></li>
-                              <li><a href="team-2.html">Team 02</a></li>
-                              <li><a href="team-3.html">Team 03</a></li>
-                              <li><a href="team-details.html">Team Details</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Blog</a>
-                  <ul class="sub-menu">
-                     <li><a href="blog.html">Blog 01</a></li>
-                     <li><a href="blog-2.html">Blog 02</a></li>
-                     <li><a href="blog-3.html">Blog 03</a></li>
-                     <li><a href="blog-4.html">Blog 04</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul>
-               </li>
-               <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-         </div>
-         <div class="nav-right-part nav-right-part-desktop self-center"><a class="btn btn-border-base"
-            href="login36.html">Login <i class="fa fa-plus"></i></a></div>
-   </div>
-      </div>
-   </nav>
-   <!-- navbar end -->
+   <div id="header"></div>
    <!-- page title start -->
    <div class="breadcrumb-area bg-cover bg-center">
       <div class="container">
@@ -194,11 +97,12 @@
                   <div class="widget widget_catagory wow animated fadeInUp" data-wow-duration="0.8s">
                      <h5 class="widget-title"><i class="fas fa-arrow-right"></i> All Service lists</h5>
                      <ul class="catagory-items">
-                        <li><a href="service-details.html"> Planning Department</a></li>
-                        <li><a href="service-details.html"> Software Department</a></li>
-                        <li><a href="service-details.html"> Hardware Department</a></li>
-                        <li><a href="service-details.html"> It Department</a></li>
-                        <li><a href="service-details.html"> Others Development</a></li>
+                        <li><a href="#" class="service-link" data-target="arbitration">Arbitration</a></li>
+                        <li><a href="#" class="service-link" data-target="mediation">Mediation</a></li>
+                        <li><a href="#" class="service-link" data-target="odr">Online Dispute Resolution (ODR)</a></li>
+                        <li><a href="#" class="service-link" data-target="industry">Industry-Specific Arbitration &
+                              Mediation</a></li>
+                        <!-- <li><a href="service-details.html"> Others Development</a></li> -->
                      </ul>
                   </div>
                   <div class="widget widget_author text-center wow animated fadeInUp" data-wow-duration="1s   ">
@@ -225,32 +129,85 @@
                         <img src="./images/service/7.png" alt="img">
                      </div>
                      <div class="details">
-                        <h4>Making this the first true generator on the Internet</h4>
-                        <p>Cras varius. Donec vitae orci sed dolor rutrum auctor. Fusce egestas elit eget lorem.
-                           Suspendisse nisl elit, rhoncus eget elementum acondimentum eget, diam. Nam at tortor in
-                           tellus interdum sagitliquam lobortis. Donec orci lectus, aliquam ut, faucibus non, euismod
-                           id, nulla. Curabitur blandit mollis lacus. Nam adipiscing. Vestibulum eu odio. Vivamus
-                           laoreet.</p>
-                        <p>Lorem available market standard dummy text available market industry Lorem Ipsum simply dummy
-                           text of free available market.There are many variations of passages of Lorem Ipsum available,
-                           but the majority have suffered alteration in some form,</p>
-                        <h4>Get touch have any question ?</h4>
-                        <p>It is a long established fact that a reader will be distr acted bioiiy the end gail readable
-                           content of a page when looking.</p>
+                        <div class="service-content">
+                           <div id="arbitration" class="service-details">
+                              <h4>Arbitration</h4>
+                              <p>Our arbitration services provide a legally binding resolution to disputes through a
+                                 structured, impartial process. Our experienced arbitrators ensure fair and enforceable
+                                 decisions that comply with international and domestic laws.
+                           </div>
+
+                           <div id="mediation" class="service-details" style="display: none;">
+                              <h4>Mediation</h4>
+                              <p>Through professional mediation services, we help disputing parties find common ground
+                                 and reach mutually beneficial solutions. Our mediators facilitate productive
+                                 discussions that lead to voluntary and sustainable agreements.
+                           </div>
+
+                           <div id="odr" class="service-details" style="display: none;">
+                              <h4>Online Dispute Resolution (ODR)</h4>
+                              <p>Leveraging technology, we offer ODR services that enable parties to resolve conflicts
+                                 remotely. This process is ideal for commercial disputes, consumer complaints, and
+                                 cross-border transactions.</p>
+                           </div>
+
+                           <div id="industry" class="service-details" style="display: none;">
+                              <h4>Industry-Specific Arbitration & Mediation</h4>
+                             <p>We provide specialized dispute resolution services for:
+                              <ul>
+                                <li> •	Corporate & Commercial Disputes</li>
+                                 <li>•	Construction & Real Estate Conflicts</li>
+                                 <li>•	Banking & Finance Disputes</li>
+                                <li> •	Intellectual Property & Trademark Cases</li>
+                                <li> •	Employment & Labor Disputes</li>
+                                 <li>•	Family & Inheritance Matters</li>
+                                 <li>•	Consumer & E-Commerce Disputes
+                                 </li>
+                              </ul>
+                           </p>
+                           </div>
+                        </div>
+
+                        <!-- <h4>Arbitration</h4>
+                        <p>Our arbitration services provide a legally binding resolution to disputes through a structured, 
+                           impartial process. Our experienced arbitrators ensure fair and enforceable decisions that comply 
+                           with international and domestic laws.</p>
+                        <h4>Mediation</h4>
+                        <p>Through professional mediation services, we help disputing parties find common ground and reach mutually
+                           beneficial solutions. Our mediators facilitate productive discussions that lead to voluntary and sustainable agreements.</p>
+                        <h4>Online Dispute Resolution (ODR)</h4>
+                         <p>Leveraging technology, we offer ODR services that enable parties to resolve conflicts remotely. This process is ideal for
+                            commercial disputes, consumer complaints, and cross-border transactions.</p> -->
+                        <h4>How It Works?</h4>
+                        <p>1. Case Assessment – Submit your dispute details for an initial evaluation. Our experts will
+                           review the case and determine the most suitable dispute resolution approach.<br>
+                           2. Selection of Arbitrator/Mediator – We assign a qualified expert with industry-specific
+                           knowledge to your case, ensuring fairness and expertise in the process.<br>
+                           3. ADR Process Initiation – Depending on the chosen method (arbitration or mediation),
+                           sessions begin with structured discussions, evidence presentation, and negotiations
+                           facilitated by our specialists.<br>
+                           4. Settlement or Award – In mediation, a mutually agreed-upon resolution is documented for
+                           compliance. In arbitration, the arbitrator delivers a final, legally binding award.<br>
+                           5. Closure & Compliance – We assist parties in ensuring compliance with the settlement or
+                           arbitration award, helping implement enforceable resolutions.<br>
+                           6. Post-Resolution Support – If needed, we provide follow-up assistance, guidance on
+                           compliance, and resources to ensure long-term conflict resolution.<br>
+                        </p>
                         <div class="accordion t-ac accordion-inner accordion-icon-left mt-[16px] mb-[24px]"
                            id="accordionExample">
                            <div class="accordion-item">
                               <h2 class="accordion-header" id="headingOne">
                                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What services do you offer?
+                                    What is arbitration?
                                  </button>
                               </h2>
                               <div id="collapseOne" class="accordion-collapse collapse show"
                                  aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                  <div class="accordion-body">
-                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                                       their default model text, search for 'lorem ipsum' will uncover</p>
+                                    <p>Arbitration is a private dispute resolution process where an impartial
+                                       arbitrator makes a binding decision based on presented evidence and arguments.
+                                    </p>
                                  </div>
                               </div>
                            </div>
@@ -258,14 +215,15 @@
                               <h2 class="accordion-header" id="headingTwo">
                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How long does it take for you to complete a project?
+                                    What is mediation?
                                  </button>
                               </h2>
                               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                  data-bs-parent="#accordionExample">
                                  <div class="accordion-body">
-                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                                       their default model text, search for 'lorem ipsum' will uncover</p>
+                                    <p>Mediation is a voluntary process where a neutral mediator helps parties negotiate
+                                       a
+                                       mutually acceptable agreement without imposing a decision.</p>
                                  </div>
                               </div>
                            </div>
@@ -273,18 +231,51 @@
                               <h2 class="accordion-header" id="headingThree">
                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How much does it cost to work with your agency?
+                                    What are the benefits of ADR?
                                  </button>
                               </h2>
                               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                  data-bs-parent="#accordionExample">
                                  <div class="accordion-body">
-                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                                       their default model text, search for 'lorem ipsum' will uncover</p>
+                                    <p>ADR is typically faster, more cost-effective, confidential, and less adversarial
+                                       compared to
+                                       traditional court proceedings.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingFour">
+                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Is an arbitration decision legally binding?
+                                 </button>
+                              </h2>
+                              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                 data-bs-parent="#accordionExample">
+                                 <div class="accordion-body">
+                                    <p>Yes, arbitration awards are legally binding and enforceable under national and
+                                       international
+                                       arbitration laws.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingFive">
+                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What industries benefit from ADR?
+                                 </button>
+                              </h2>
+                              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                 data-bs-parent="#accordionExample">
+                                 <div class="accordion-body">
+                                    <p>ADR is widely used in commercial, corporate, construction, intellectual property,
+                                       labor, and consumer disputes.</p>
                                  </div>
                               </div>
                            </div>
                         </div>
+
                         <h4>Our Best it company</h4>
                         <p>Thooiie point the of using the table.Your Startup industry is ours standard our service
                            decesion loream saum solar sysem in the world.</p>
@@ -296,13 +287,13 @@
                                  <li><i class="far fa-check-circle"></i> Everything you need to succeed</li>
                               </ul>
                            </div>
-                           <div class="custom-sm:w-1/2">
+                           <!-- <div class="custom-sm:w-1/2">
                               <ul class="single-list-inner style-check style-check mb-[16px]">
                                  <li><i class="far fa-check-circle"></i> Creating a Balanced and Nutritious</li>
                                  <li><i class="far fa-check-circle"></i> iTechnology that helps grow companies</li>
                                  <li><i class="far fa-check-circle"></i> Everything you need to succeed</li>
                               </ul>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
@@ -313,145 +304,8 @@
    </div>
    <!-- service area end -->
    <!-- footer area start -->
-   <footer class="footer-area bg-black bg-cover bg-center">
-      <div class="footer-subscribe">
-         <div class="container">
-            <div class="footer-subscribe-inner bg-cover bg-center wow animated fadeInUp" data-wow-duration="0.8s">
-               <div class="row">
-                  <div class="custom-md:w-1/2">
-                     <h2 class="custom-md:mb-0 mb-[16px]">Subscribe To Our Newsletter</h2>
-                  </div>
-                  <div class="custom-md:w-1/2 self-center   custom-md:!text-end">
-                     <input type="text" placeholder="Your e-mail address">
-                     <a class="btn btn-black border-radius-0" href="index.html">Submit now</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_about wow animated fadeInUp" data-wow-duration="0.8s">
-                  <div class="thumb">
-                     <img src="./images/logo2.png" alt="img">
-                  </div>
-                  <div class="details">
-                     <p>Melbourne is simply is dumiomy is text Lorem Ipsum is simply</p>
-                     <p class="mt-[16px]"><i class="fa fa-phone-alt"></i> (+888) 123 456 765</p>
-                     <p class="mt-[8px]"><i class="fas fa-envelope"></i> (+888) 123 456 765</p>
-                     <ul class="social-media">
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-twitter"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <h4 class="widget-title">Our Service</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Ui Design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Digital marketing </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Video Editing</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Pc Repairs</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web Development</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                  <h4 class="widget-title">Pay links</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget-recent-post wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.9s">
-                  <h4 class="widget-title">Contact us</h4>
-                  <ul>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/1.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0"><a href="blog-details.html">Social Media For Promote Business.</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/2.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0">
-                                 <a href="blog-details.html">Marketing For Base market watch</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="footer-bottom !border-[rgba(50,47,47,1)]">
-         <div class="container">
-            <div class="row">
-               <div class="custom-sm:w-1/2 self-center">
-                  <p>© AgileTech 2025 | All Rights Reserved</p>
-               </div>
-               <div class="custom-sm:w-1/2   custom-md:!text-end">
-                  <a href="index.html">Terms & Condition</a>
-                  <a href="index.html">Privacy Policy</a>
-                  <a href="index.html">Contact Us</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
+   <div id="footer"></div>
    <!-- footer area end -->
-   <!-- back to top area start -->
-   <div class="back-to-top">
-      <span class="back-top"><i class="fa fa-angle-up"></i></span>
-   </div>
-   <!-- back to top area end -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-   crossorigin="anonymous" referrerpolicy="no-referrer">
-
 </body>
 
 </html>

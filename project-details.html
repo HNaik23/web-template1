@@ -8,182 +8,53 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
    <script defer="defer" src="js/app.bundle.js"></script>
    <link href="css/app.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+   <script>
+      // Function to remove the preloader after content is loaded
+      function hidePreloader() {
+         document.getElementById('preloader').style.display = 'none';
+      }
+
+      // Fetch header and footer
+      Promise.all([
+         fetch('header.html').then(response => response.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+         }),
+         fetch('footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+         })
+      ]).then(() => {
+         // Once both header and footer are loaded, hide preloader
+         hidePreloader();
+      }).catch(error => {
+         console.error("Error loading header/footer:", error);
+         hidePreloader(); // Ensure preloader is removed even if there's an error
+      });
+
+      // Fallback to remove preloader after a timeout (in case loading fails)
+      setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+   </script>
+
 </head>
 
 <body>
-   <!-- preloader area start -->
-   <div class="preloader" id="preloader">
-      <div class="preloader-inner">
-         <div class="spinner">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
-         </div>
-      </div>
-   </div>
-   <!-- preloader area end -->
-   <!-- search popup start-->
-   <div class="td-search-popup" id="td-search-popup">
-      <form action="index.html" class="search-form">
-         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search.....">
-         </div>
-         <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-      </form>
-   </div>
-   <!-- search popup end-->
-   <div class="body-overlay" id="body-overlay"></div>
-   <!-- navbar start -->
-   <nav class="navbar navbar-area navbar-expand-lg">
-      <div class="container nav-container navbar-bg">
-         <div class="responsive-mobile-menu">
-            <button class="menu toggle-btn block custom-md:hidden" data-target="#itech_main_menu" aria-expanded="false"
-               aria-label="Toggle navigation">
-               <span class="icon-left"></span>
-               <span class="icon-right"></span>
-            </button>
-         </div>
-         <div class="logo">
-            <a href="index.html"><img src="./images/logo.png" alt="img"></a>
-         </div>
-         <div class="nav-right-part nav-right-part-mobile">
-            <a class="search-bar-btn" href="index.html">
-               <i class="fa fa-search"></i>
-            </a>
-         </div>
-         <div class="collapse navbar-collapse" id="itech_main_menu">
-            <ul class="navbar-nav menu-open   custom-md:!text-end">
-               <li class="menu-item-has-children">
-                  <a href="index.html">Home</a>
-                  <ul class="sub-menu">
-                     <li><a href="index.html">Software Agency</a></li>
-                     <li><a href="index-2.html">SaaS App Landing</a></li>
-                     <li><a href="index-3.html">Payments Solution</a></li>
-                     <li><a href="index-4.html">Startup / Software Company</a></li>
-                     <li><a href="index-5.html">Artificial Intelligence</a></li>
-                     <li><a href="index-6.html">NFT Service</a></li>
-                     <li><a href="index-7.html">Cyber Security</a></li>
-                     <li><a href="index-8.html">Hardware Service</a></li>
-                     <li><a href="index-9.html">ICO Landing</a></li>
-                     <li><a href="index-10.html">Personal Portfolio</a></li>
-                     <li><a href="index-11.html">SEO Service</a></li>
-                     <li><a href="index-12.html">Business Consultancy</a></li>
-                     <li><a href="index-13.html">IT Solution</a></li>
-                     <li><a href="index-14.html">IT Agency Two</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Service</a>
-                  <ul class="sub-menu">
-                     <li><a href="service.html">Service 01</a></li>
-                     <li><a href="service-2.html">Service 02</a></li>
-                     <li><a href="service-3.html">Service 03</a></li>
-                     <li><a href="service-4.html">Service 04</a></li>
-                     <li><a href="service-5.html">Service 05</a></li>
-                     <li><a href="service-details.html">Service Single</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Pages</a>
-                  <ul class="sub-menu">
-                     <li><a href="about.html">About Us</a></li>
-                     <li><a href="team.html">Team 01</a></li>
-                     <li><a href="team-2.html">Team 02</a></li>
-                     <li><a href="team-3.html">Team 03</a></li>
-                     <li><a href="team-details.html">Team Details</a></li>
-                     <li><a href="pricing.html">Pricing 01</a></li>
-                     <li><a href="pricing-2.html">Pricing 02</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children mega-menu">
-                  <a href="index.html">Mega Menu</a>
-                  <div class="sub-menu">
-                     <div class="row">
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="index.html">Software Agency</a></li>
-                              <li><a href="index-2.html">SaaS App Landing</a></li>
-                              <li><a href="index-3.html">Payments Solution</a></li>
-                              <li><a href="index-4.html">Startup / Software Company</a></li>
-                              <li><a href="index-5.html">Artificial Intelligence</a></li>
-                              <li><a href="index-6.html">NFT Service</a></li>
-                              <li><a href="index-7.html">Cyber Security</a></li>
-                              <li><a href="index-8.html">Hardware Service</a></li>
-                              <li><a href="index-9.html">ICO Landing</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="service.html">Service 01</a></li>
-                              <li><a href="service-2.html">Service 02</a></li>
-                              <li><a href="service-3.html">Service 03</a></li>
-                              <li><a href="service-4.html">Service 04</a></li>
-                              <li><a href="service-5.html">Service 05</a></li>
-                              <li><a href="service-details.html">Service Single</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="project.html">Project 01</a></li>
-                              <li><a href="project-2.html">Project 02</a></li>
-                              <li><a href="project-3.html">Project 03</a></li>
-                              <li><a href="project-details.html">Case Study Details</a></li>
-                              <li><a href="pricing.html">Pricing 01</a></li>
-                              <li><a href="pricing-2.html">Pricing 02</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="about.html">About Us</a></li>
-                              <li><a href="team.html">Team 01</a></li>
-                              <li><a href="team-2.html">Team 02</a></li>
-                              <li><a href="team-3.html">Team 03</a></li>
-                              <li><a href="team-details.html">Team Details</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Blog</a>
-                  <ul class="sub-menu">
-                     <li><a href="blog.html">Blog 01</a></li>
-                     <li><a href="blog-2.html">Blog 02</a></li>
-                     <li><a href="blog-3.html">Blog 03</a></li>
-                     <li><a href="blog-4.html">Blog 04</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul>
-               </li>
-               <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-         </div>
-         <div class="nav-right-part nav-right-part-desktop self-center">
-            <a class="navbar-phone" href="tel:123-456789">
-               <span class="icon">
-                  <img src="./images/icon/1.png" alt="img">
-               </span>
-               <span>Need help?</span>
-               <h5>(808) 555-0111</h5>
-            </a>
-         </div>
-      </div>
-   </nav>
-   <!-- navbar end -->
+   <div id="header"></div>
    <!-- page title start -->
    <div class="breadcrumb-area bg-cover bg-center">
       <div class="container">
          <div class="breadcrumb-inner">
             <div class="row justify-content-center">
                <div class="custom-md:w-1/2">
-                  <h2 class="page-title">Blog Details</h2>
+                  <h2 class="page-title">Case Details</h2>
                </div>
                <div class="custom-md:w-1/2    custom-md:!text-end">
                   <ul class="page-list">
                      <li><a href="index.html">Home</a></li>
-                     <li>Blog Details</li>
+                     <li>Case Details</li>
                   </ul>
                </div>
             </div>
@@ -200,14 +71,11 @@
                   <div class="widget widget_info">
                      <h5 class="widget-title"><i class="fas fa-arrow-right"></i> Project Info</h5>
                      <div class="widget-info-inner">
-                        <h6>Clients</h6>
-                        <p>Porter Victoria</p>
-                        <h6>Category</h6>
-                        <p>It Service</p>
-                        <h6>Date</h6>
-                        <p>20 January, 2023</p>
-                        <h6>Location</h6>
-                        <p>Cakung, Jakarta</p>
+                        <h6>The TATA Sons (P) Ltd. v. Siva Industries & Holdings Ltd. case revolves around contractual
+                           obligations and arbitration related to shareholding agreements in Tata Teleservices Limited
+                           (TTSL).
+                        </h6>
+                        <!-- <p>Cakung, Jakarta</p> -->
                      </div>
                   </div>
                </div>
@@ -219,21 +87,137 @@
                         <img src="./images/service/7.png" alt="img">
                      </div>
                      <div class="details">
-                        <h4>Making this the first true generator on the Internet</h4>
-                        <p>Cras varius. Donec vitae orci sed dolor rutrum auctor. Fusce egestas elit eget lorem.
-                           Suspendisse nisl elit, rhoncus eget elementum acondimentum eget, diam. Nam at tortor in
-                           tellus interdum sagitliquam lobortis. Donec orci lectus, aliquam ut, faucibus non, euismod
-                           id, nulla. Curabitur blandit mollis lacus. Nam adipiscing. Vestibulum eu odio. Vivamus
-                           laoreet.</p>
-                        <p>Lorem available market standard dummy text available market industry Lorem Ipsum simply dummy
-                           text of free available market.There are many variations of passages of Lorem Ipsum available,
-                           but the majority have suffered alteration in some form,</p>
-                        <h4>Get touch have any question ?</h4>
-                        <p>It is a long established fact that a reader will be distr acted bioiiy the end gail readable
-                           content of a page when looking.</p>
-                        <h4>Our Best it company</h4>
-                        <p>Thooiie point the of using the table.Your Startup industry is ours standard our service
-                           decesion loream saum solar sysem in the world.</p>
+                        <h4>Introduction</h4>
+                        <p>The case <b> Sons (P) Ltd. v. Siva Industries & Holdings Ltd.</b> revolves around contractual
+                           obligations, arbitration, and corporate disputes related to shareholding agreements in
+                           <b>Tata
+                              Teleservices Limited (TTSL)</b>. The dispute primarily pertains to the failure of Siva
+                           Industries
+                           to honor its commitments under the inter-se agreements signed with Tata Sons and other
+                           parties. This case is significant in understanding how corporate agreements, shareholder
+                           obligations, and arbitration laws intersect in India's legal and business landscape.
+                        </p>
+                        <h4>Background</h4>
+                        <p>
+                           Tata Sons is the principal investment holding company and promoter of Tata Group companies.
+                           It has a diversified portfolio and plays a pivotal role in managing Tata’s business
+                           interests. Siva Industries & Holdings Ltd. (SIHL) is a company promoted by C. Sivasankaran,
+                           who was involved in several telecom and infrastructure ventures.
+                           <br>
+                           TTSL, a telecom company, issued shares to multiple investors, including Siva Industries and
+                           <b>NTT Docomo</b>, a Japanese firm. NTT Docomo, one of the largest telecom operators in
+                           Japan,
+                           entered the Indian market by acquiring a stake in TTSL. This investment was governed by a
+                           series of agreements that defined the rights, responsibilities, and exit mechanisms for the
+                           shareholders.
+
+                        </p>
+                        <h4>Key Agreements Involved</h4>
+                        <p>The legal dispute arose from several agreements that governed the financial and operational
+                           structure of TTSL. The key agreements included:
+                           <br><b>1. Share Subscription Agreement (SSA) (2006) – </b> Under this agreement, Siva
+                           Industries
+                           acquired shares in TTSL, making it a minority stakeholder.
+                           <br><B>2. Shareholders’ Agreement (SHA) (2009) –</B> This agreement, signed between Tata
+                           Sons, NTT Docomo, and TTSL, governed the rights and responsibilities of shareholders,
+                           particularly concerning exit mechanisms.
+                           <br><b>3. Inter-se Agreement (2009) – </b>This agreement stipulated that in the event of NTT
+                           Docomo’s exit from TTSL, existing shareholders (including Siva Industries) would be
+                           responsible for acquiring the shares proportionately. This was a crucial clause that later
+                           became the source of the dispute.
+                           <br><b>4. Secondary Share Purchase Agreement (2009) –</b> This agreement facilitated Docomo’s
+                           purchase of TTSL shares from Siva Industries, defining their financial obligations and future
+                           exit strategy.
+
+                        </p>
+                        <h4>The Dispute</h4>
+                        <p>In 2014, <b>NTT Docomo exercised its exit option</b> under the SHA, seeking to sell its 26.5%
+                           stake
+                           in TTSL. As per the agreed terms, Tata Sons and other shareholders were obligated to purchase
+                           the shares at a predetermined valuation.
+                           <br>Tata Sons honored its commitment and arranged for the acquisition of Docomo’s shares.
+                           However, Siva Industries <b>failed to fulfill its obligation </b> under the Inter-se
+                           Agreement to
+                           purchase its proportional share of the stake. This led to financial and legal complications,
+                           as Tata Sons was left to shoulder the burden of acquiring additional shares without the
+                           expected contributions from Siva Industries.
+                           <br>Due to this default, Tata Sons initiated arbitration proceedings under the<b>London Court
+                              of
+                              International Arbitration (LCIA)</b> to enforce the obligations of Siva Industries. SIHL,
+                           however, did not comply with the arbitration process, leading Tata Sons to seek legal
+                           remedies for enforcement.
+                        </p>
+                        <h4>Legal Proceedings</h4>
+                        <p>
+                        <h5>1. Arbitration Initiation (2017)</h5>
+                        <p>
+                           a. Tata Sons issued a formal notice of arbitration against Siva Industries, seeking to
+                           enforce the obligations under the agreements.
+                           <br> b. The dispute was referred to arbitration under the <b>Arbitration and Conciliation
+                              Act, 1996</b>,
+                           which governs dispute resolution mechanisms in India.
+                        </p>
+                        <h5>2. Supreme Court Involvement (2018)</h5>
+                        <p>
+                           a. When Siva Industries failed to respond to the arbitration proceedings, Tata Sons moved to
+                           the Supreme Court, seeking <b>the appointment of an arbitrator.</b>
+                           <br> b. The Supreme Court intervened and appointed <b>Justice S. N. Variava (Retd.)</b> as
+                           the sole
+                           arbitrator to preside over the dispute.
+                        </p>
+                        <h5>3. Mandate of Arbitration and Time Constraints</h5>
+                        <p>
+                           a. The case raised significant questions regarding the time limits imposed on arbitration
+                           under Indian law. The <b>Arbitration and Conciliation (Amendment) Act, 2019</b>, modified the
+                           timelines for international commercial arbitrations.
+                           <br> b. The court had to interpret <b>Section 29A</b>, which outlines a mandatory 12-month
+                           timeline for
+                           rendering arbitral awards. However, the ruling clarified that <b>international arbitrations
+                              are
+                              excluded</b> from this strict deadline, allowing for a more flexible approach.
+                        </p>
+                        <h5>4. Outcome and Ruling</h5>
+                        <p>
+                           a. The Supreme Court ruled that the arbitration proceedings could<b> continue beyond the
+                              initial
+                              time limit</b>, ensuring that procedural delays did not hinder the enforcement of
+                           contractual
+                           obligations.
+                           <br> b. It emphasized that international commercial arbitration should be conducted
+                           <b>expeditiously
+                              but without rigid time constraints.</b>
+                           <br> c. The ruling reinforced the <b>principles of contractual enforcement, shareholder
+                              accountability, </b>and <b>arbitration-friendly judicial intervention.</b>
+
+                        </p>
+                        </p>
+                        <h4>Key Legal Takeaways</h4>
+                        <p>
+                           <b> 1. Binding Nature of Inter-se Agreements –</b> This case highlights the importance of
+                           shareholder agreements and the need for parties to honor their contractual commitments. The
+                           ruling serves as a warning to investors who might attempt to evade their obligations.
+                           <br><b>2. Arbitration as a Dispute Resolution Mechanism –</b> Indian courts reinforced
+                           arbitration as an effective means of resolving corporate disputes. The ruling strengthens
+                           India’s pro-arbitration stance, aligning it with global best practices.
+                           <br><b>3. Interpretation of Section 29A of Arbitration Law –</b> The Supreme Court clarified
+                           that international commercial arbitrations are not strictly bound by the 12-month deadline
+                           for rendering awards. This ensures that complex international disputes receive adequate time
+                           for fair resolution.
+                           <br><b>4. Corporate Governance and Shareholder Responsibilities –</b> The case underscores
+                           the importance of corporate governance, ensuring that investors fulfill their financial
+                           commitments in high-value corporate transactions.
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>The <b>TATA Sons (P) Ltd. v. Siva Industries & Holdings Ltd.</b> case is a landmark judgment
+                           reinforcing the credibility of arbitration in corporate disputes. It highlighted the
+                           necessity for shareholders to honor agreements and set a precedent for enforcing arbitration
+                           awards in international commercial disputes.
+                           By addressing issues related to arbitration timelines, corporate governance, and shareholder
+                           obligations, this case has strengthened India's legal framework for commercial dispute
+                           resolution. The ruling also reinforced India's stance as an arbitration-friendly
+                           jurisdiction, ensuring that foreign investors have confidence in the country's legal
+                           mechanisms for enforcing contracts.
+                        </p>
                      </div>
                   </div>
                </div>
@@ -243,145 +227,8 @@
    </div>
    <!-- service area end -->
    <!-- footer area start -->
-   <footer class="footer-area bg-black bg-cover bg-center">
-      <div class="footer-subscribe">
-         <div class="container">
-            <div class="footer-subscribe-inner bg-cover bg-center wow animated fadeInUp" data-wow-duration="0.8s">
-               <div class="row">
-                  <div class="custom-md:w-1/2">
-                     <h2 class="custom-md:mb-0 mb-[16px]">Subscribe To Our Newsletter</h2>
-                  </div>
-                  <div class="custom-md:w-1/2 self-center   custom-md:!text-end">
-                     <input type="text" placeholder="Your e-mail address">
-                     <a class="btn btn-black border-radius-0" href="index.html">Submit now</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-         <div class="row">
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_about wow animated fadeInUp" data-wow-duration="0.8s">
-                  <div class="thumb">
-                     <img src="./images/logo2.png" alt="img">
-                  </div>
-                  <div class="details">
-                     <p>Melbourne is simply is dumiomy is text Lorem Ipsum is simply</p>
-                     <p class="mt-[16px]"><i class="fa fa-phone-alt"></i> (+888) 123 456 765</p>
-                     <p class="mt-[8px]"><i class="fas fa-envelope"></i> (+888) 123 456 765</p>
-                     <ul class="social-media">
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-facebook-f"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-twitter"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-instagram"></i>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="index.html">
-                              <i class="fab fa-youtube"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <h4 class="widget-title">Our Service</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Ui Design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Digital marketing </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Video Editing</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Pc Repairs</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web Development</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget_nav_menu wow animated fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                  <h4 class="widget-title">Pay links</h4>
-                  <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="custom-md:w-1/4 custom-sm:w-1/2">
-               <div class="widget widget-recent-post wow animated fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.9s ">
-                  <h4 class="widget-title">Contact us</h4>
-                  <ul>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/1.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0"><a href="blog-details.html">Social Media For Promote Business.</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="./images/widget/2.png" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0">
-                                 <a href="blog-details.html">Marketing For Base market watch</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="footer-bottom !border-[rgba(50,47,47,1)]">
-         <div class="container">
-            <div class="row">
-               <div class="custom-sm:w-1/2 self-center">
-                  <p>© AgileTech 2025 | All Rights Reserved</p>
-               </div>
-               <div class="custom-sm:w-1/2   custom-md:!text-end">
-                  <a href="index.html">Terms & Condition</a>
-                  <a href="index.html">Privacy Policy</a>
-                  <a href="index.html">Contact Us</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </footer>
+   <div id="footer"></div>
    <!-- footer area end -->
-   <!-- back to top area start -->
-   <div class="back-to-top">
-      <span class="back-top"><i class="fa fa-angle-up"></i></span>
-   </div>
-   <!-- back to top area end -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-   crossorigin="anonymous" referrerpolicy="no-referrer">
-
 </body>
 
 </html>

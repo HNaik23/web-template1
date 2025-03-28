@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
+    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+    <script>
+        // Function to remove the preloader after content is loaded
+        function hidePreloader() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+
+        // Fetch header and footer
+        Promise.all([
+            fetch('header.html').then(response => response.text()).then(data => {
+                document.getElementById('header').innerHTML = data;
+            }),
+            fetch('footer.html').then(response => response.text()).then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        ]).then(() => {
+            // Once both header and footer are loaded, hide preloader
+            hidePreloader();
+        }).catch(error => {
+            console.error("Error loading header/footer:", error);
+            hidePreloader(); // Ensure preloader is removed even if there's an error
+        });
+
+        // Fallback to remove preloader after a timeout (in case loading fails)
+        setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- page title start -->
+    <div class="breadcrumb-area bg-cover bg-center">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <div class="row justify-content-center">
+                    <div class="custom-md:w-1/2">
+                        <h2 class="page-title">Case Details</h2>
+                    </div>
+                    <div class="custom-md:w-1/2    custom-md:!text-end">
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Case Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page title end -->
+    <!-- service area start -->
+    <div class="service-area pd-top-120 pd-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="custom-md:w-1/3 w-full">
+                    <div class="td-sidebar service-sidebar wow animated fadeInUp" data-wow-duration="1s ">
+                        <div class="widget widget_info">
+                            <h5 class="widget-title"><i class="fas fa-arrow-right"></i> Project Info</h5>
+                            <div class="widget-info-inner">
+                                <h6>The Vidya Drolia v. Durga Trading Corporation case clarified the arbitrability of
+                                    tenancy disputes under the Arbitration and Conciliation Act, 1996.</h6>
+                                <!-- <p>Cakung, Jakarta</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-md:w-8/12">
+                    <div class="blog-details-page-content">
+                        <div class="single-blog-inner mb-0 wow animated fadeInUp" data-wow-duration="1s ">
+                            <div class="thumb">
+                                <img src="./images/service/7.png" alt="img">
+                            </div>
+                            <div class="details">
+                                <h4>Introduction</h4>
+                                <p>The case <b>Vidya Drolia v. Durga Trading Corporation</b> is a landmark judgment by
+                                    the
+                                    <b>Supreme Court of India</b> that significantly impacted arbitration law in the
+                                    country.
+                                    The case primarily revolved around the arbitrability of landlord-tenant disputes and
+                                    clarified the<b> principle of Kompetenz-Kompetenz</b>, reinforcing the autonomy of
+                                    arbitral
+                                    tribunals in determining their jurisdiction.
+                                </p>
+                                <h4>Background</h4>
+                                <p>
+                                    Vidya Drolia, a tenant, was in a rental dispute with<b> Durga Trading
+                                        Corporation</b>, the
+                                    landlord. The dispute arose regarding <b>non-payment of rent and eviction</b>,
+                                    prompting
+                                    Durga Trading Corporation to invoke the arbitration clause in the lease agreement.
+                                    Vidya Drolia contested this, arguing that<b> tenancy matters under the Transfer of
+                                        Property Act, 1882</b>, are non-arbitrable and must be adjudicated by civil
+                                    courts or
+                                    rent control tribunals.
+                                    <br> The key legal question was whether disputes under the <b>Transfer of Property
+                                        Act</b>—particularly involving <b>eviction, non-payment of rent, and lease
+                                        violations</b>—could
+                                    be resolved through arbitration or required adjudication in civil courts.
+                                </p>
+                                <h4>Legal Issues</h4>
+                                <p>
+                                    <b>1. Arbitrability of Tenancy Disputes:</b> Whether disputes concerning eviction
+                                    and tenancy could be referred to arbitration.
+                                    <br><b>2. Jurisdiction of Civil Courts vs. Arbitration:</b> Whether tenancy disputes
+                                    fall within the exclusive jurisdiction of civil courts or can be resolved by
+                                    arbitration.
+                                    <br><b>3. Application of the Doctrine of Kompetenz-Kompetenz:</b> Whether the
+                                    arbitral tribunal has the power to determine its own jurisdiction.
+                                    <br><b>4. Interpretation of Section 11 of the Arbitration and Conciliation Act,
+                                        1996:</b> Whether courts should limit their role in referring matters to
+                                    arbitration.
+
+                                </p>
+                                <h4>Court Proceedings and Judgment</h4>
+                                <p>
+                                    The case went through multiple stages of litigation before being decided by the
+                                    Supreme Court. The following are key highlights of the judgment:
+                                    <br><b> • Arbitrability of Tenancy Disputes:</b> The Supreme Court held that tenancy
+                                    disputes
+                                    under the Transfer of Property Act, 1882, are arbitrable, provided they are not
+                                    covered by special tenancy laws that explicitly bar arbitration.
+                                    <br><b>• Exclusive Jurisdiction of Courts:</b> The Court clarified that disputes
+                                    under specific
+                                    rent control laws are non-arbitrable because they require adjudication by
+                                    specialized tribunals.
+                                    <br><b>• Kompetenz-Kompetenz Principle:</b> The ruling reinforced that arbitral
+                                    tribunals have
+                                    the primary authority to determine their own jurisdiction, reducing court
+                                    interference at the pre-arbitration stage.
+                                    <br><b> • Role of Courts in Arbitration:</b> The Court restricted judicial
+                                    intervention in
+                                    arbitration proceedings under Section 11 of the Arbitration and Conciliation Act,
+                                    1996, emphasizing that courts should adopt a pro-arbitration stance unless the
+                                    dispute is clearly non-arbitrable.
+                                </p>
+                                <h4>Key Legal Findings</h4>
+                                <p>
+                                    <b>1. Four-Fold Test for Arbitrability:</b> The Supreme Court laid down a test to
+                                    determine whether a dispute is arbitrable:
+                                    <br>&nbsp&nbsp&nbsp&nbsp
+                                    a. The dispute must be related to rights in personam (personal rights) rather
+                                    than rights in rem (public rights).
+                                    <br>&nbsp&nbsp&nbsp&nbsp
+                                    b. The dispute must not involve sovereign or public interest functions that
+                                    require adjudication by courts.
+                                    <br>&nbsp&nbsp&nbsp&nbsp
+                                    c. The jurisdiction of specialized tribunals should not be explicitly conferred
+                                    by a statute.
+                                    <br>&nbsp&nbsp&nbsp&nbsp
+                                    d. The dispute must be capable of being resolved through arbitration without
+                                    overriding public policy concerns.
+                                    <br><b>2. Pro-Arbitration Approach:</b> The ruling reinforced India's commitment to
+                                    promoting arbitration as an effective dispute resolution mechanism.
+                                    <br><b>3. Distinction Between Statutory and Contractual Tenancies:</b> The judgment
+                                    clarified that contractual tenancy disputes may be arbitrable, but statutory tenancy
+                                    disputes under rent control laws are non-arbitrable.
+
+                                </p>
+                                <h4>Impact of the Judgment</h4>
+                                <p>
+                                    <b>1. Strengthened Arbitration Regime:</b> The ruling emphasized the limited role of
+                                    courts in arbitration, ensuring that more commercial disputes are resolved through
+                                    alternative dispute resolution (ADR) mechanisms.
+                                    <br><b>2. Clarity on Arbitrability of Tenancy Disputes:</b> The judgment provided a
+                                    clear distinction between disputes that can be arbitrated and those that must be
+                                    resolved through statutory tribunals.
+                                    <br><b>3. Reduction in Court Interference:</b> By reinforcing the
+                                    Kompetenz-Kompetenz doctrine, the judgment minimized court intervention in
+                                    arbitration proceedings.
+                                    <br><b>4. Guidance for Future Arbitration Cases:</b> The four-fold test for
+                                    arbitrability has become a reference point for determining the arbitrability of
+                                    other types of disputes in India.
+                                </p>
+                                <h4>Conclusion</h4>
+                                <p>The <b>Vidya Drolia v. Durga Trading Corporation </b>case is a milestone ruling in
+                                    India's
+                                    arbitration landscape. It reaffirmed the judiciary's pro-arbitration approach while
+                                    establishing a<b> structured framework for determining arbitrability</b>. The case
+                                    underscores the importance of<b> reducing judicial interference, enhancing dispute
+                                        resolution efficiency, and reinforcing party autonomy in commercial
+                                        agreements</b>.
+                                    <br>This decision has had far-reaching implications for contractual disputes,
+                                    encouraging businesses and individuals to rely on arbitration as an effective
+                                    alternative to prolonged litigation in Indian courts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service area end -->
+    <!-- footer area start -->
+    <div id="footer"></div>
+    <!-- footer area end -->
+</body>
+
+</html>

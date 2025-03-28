@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
+    <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
+    <script defer="defer" src="js/app.bundle.js"></script>
+    <link href="css/app.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <!-- <script defer="defer" src="js/all.min.js"></script> -->
+    <script>
+        // Function to remove the preloader after content is loaded
+        function hidePreloader() {
+            document.getElementById('preloader').style.display = 'none';
+        }
+
+        // Fetch header and footer
+        Promise.all([
+            fetch('header.html').then(response => response.text()).then(data => {
+                document.getElementById('header').innerHTML = data;
+            }),
+            fetch('footer.html').then(response => response.text()).then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        ]).then(() => {
+            // Once both header and footer are loaded, hide preloader
+            hidePreloader();
+        }).catch(error => {
+            console.error("Error loading header/footer:", error);
+            hidePreloader(); // Ensure preloader is removed even if there's an error
+        });
+
+        // Fallback to remove preloader after a timeout (in case loading fails)
+        setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- page title start -->
+    <div class="breadcrumb-area bg-cover bg-center">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <div class="row justify-content-center">
+                    <div class="custom-md:w-1/2">
+                        <h2 class="page-title">Case Details</h2>
+                    </div>
+                    <div class="custom-md:w-1/2    custom-md:!text-end">
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Case Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page title end -->
+    <!-- service area start -->
+    <div class="service-area pd-top-120 pd-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="custom-md:w-1/3 w-full">
+                    <div class="td-sidebar service-sidebar wow animated fadeInUp" data-wow-duration="1s ">
+                        <div class="widget widget_info">
+                            <h5 class="widget-title"><i class="fas fa-arrow-right"></i> Project Info</h5>
+                            <div class="widget-info-inner">
+                                <h6>The Delhi Airport Metro Express Pvt. Ltd. (DAMEPL) v. Delhi Metro Rail Corporation
+                                    Ltd. (DMRC) case centered around the termination of a concession agreement due to
+                                    structural defects in the metro line.</h6>
+                                <!-- <p>Cakung, Jakarta</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-md:w-8/12">
+                    <div class="blog-details-page-content">
+                        <div class="single-blog-inner mb-0 wow animated fadeInUp" data-wow-duration="1s ">
+                            <div class="thumb">
+                                <img src="./images/service/7.png" alt="img">
+                            </div>
+                            <div class="details">
+                                <h4>Introduction</h4>
+                                <p>The case <b>Delhi Airport Metro Express Pvt. Ltd. v. Delhi Metro Rail Corporation
+                                        Ltd.</b>
+                                    is a landmark ruling by the <b>Supreme Court of India</b>, which significantly
+                                    impacted the
+                                    principles of arbitration, contractual disputes, and public-private partnerships
+                                    (PPP) in India. The dispute revolved around<b> termination of a concession
+                                        agreement,</b>
+                                    contractual obligations, and the enforcement of an arbitral award.
+                                </p>
+                                <h4>Background</h4>
+                                <p>
+                                    Delhi Airport Metro Express Pvt. Ltd. (DAMEPL), a subsidiary of Reliance
+                                    Infrastructure Ltd., had entered into a <b>Concession Agreement</b> with the Delhi
+                                    Metro
+                                    Rail Corporation Ltd. (DMRC) for the operation of the <b>Delhi Airport Metro Express
+                                        Line</b>. The agreement was part of a public-private partnership (PPP) model,
+                                    with
+                                    DAMEPL responsible for operating and maintaining the metro line.
+                                    <br>However, due to <b>structural defects</b> and operational difficulties, DAMEPL
+                                    alleged that
+                                    DMRC had failed to meet its contractual obligations, leading to the deterioration of
+                                    services. Citing these issues, DAMEPL terminated the agreement and sought
+                                    compensation for losses.
+                                </p>
+                                <h4>Legal Issues</h4>
+                                <p>
+                                    <b>1. Validity of Contract Termination:</b> Whether DAMEPL was justified in
+                                    terminating the agreement due to DMRC’s failure to meet contractual obligations.
+                                    <br><b>2. Arbitral Award Enforcement:</b> Whether the arbitration tribunal’s award
+                                    in favor of DAMEPL was binding on DMRC.
+                                    <br><b>3. Scope of Judicial Review in Arbitration:</b> Whether courts have the power
+                                    to interfere with an arbitral award under the Arbitration and Conciliation Act,
+                                    1996.
+                                    <br><b>4. Compensation and Financial Liabilities:</b> Determining the quantum of
+                                    damages and liabilities owed by DMRC to DAMEPL.
+
+
+                                </p>
+                                <h4>Court Proceedings and Judgment</h4>
+                                <p>
+                                    The dispute was initially<b> referred to arbitration</b>, where the tribunal ruled
+                                    in favor
+                                    of <b>DAMEPL</b>, awarding significant compensation. DMRC challenged the arbitral
+                                    award
+                                    before the Delhi High Court, which upheld the award. Subsequently, DMRC appealed to
+                                    the Supreme Court of India.
+                                    <br>The Supreme Court, in a landmark ruling, reaffirmed the <b>principle of minimal
+                                        judicial interference in arbitration</b> and upheld the arbitral award in favor
+                                    of
+                                    DAMEPL. The Court emphasized that arbitral awards should not be set aside unless
+                                    there is <b>gross illegality or violation of public policy</b>.
+                                </p>
+                                <h4>Key Legal Findings</h4>
+                                <p>
+                                    <b> 1. Enforceability of Arbitral Awards:</b> The judgment reinforced that arbitral
+                                    awards, once passed, are final and binding unless there is substantial legal ground
+                                    for setting them aside.
+                                    <br><b>2. Limited Court Intervention:</b> The Court reiterated that judicial review
+                                    of arbitration cases should be restrictive, promoting arbitration as an effective
+                                    alternative dispute resolution mechanism.
+                                    <br><b>3. Contractual Obligations in PPP Projects:</b> The ruling stressed that
+                                    parties in public-private partnerships (PPPs) must adhere to their contractual
+                                    obligations, failing which contractual remedies, including damages and termination,
+                                    are enforceable.
+                                    <br><b>4. Financial Liability of Public Sector Entities:</b> The case underscored
+                                    that public sector undertakings (PSUs) cannot arbitrarily challenge or refuse to
+                                    honor contractual and arbitral obligations.
+
+                                </p>
+                                <h4>Impact of the Judgment</h4>
+                                <p>
+                                    <b>1. Strengthened Arbitration Framework:</b> The ruling reinforced India’s
+                                    commitment to arbitration by limiting court interference in arbitral awards.
+                                    <br><b>2. Clarity in PPP Disputes:</b> The judgment provided guidance on how
+                                    termination clauses and contractual breaches should be handled in PPP models.
+                                    <br><b>3. Investor Confidence in Infrastructure Projects:</b> The decision reassured
+                                    private investors that contractual rights will be protected, enhancing confidence in
+                                    infrastructure investments.
+                                    <br><b>4. Accountability of Government Entities:</b> The ruling reinforced that
+                                    government and public bodies must adhere to contractual obligations, preventing
+                                    arbitrary contract terminations.
+                                </p>
+                                <h4>Conclusion</h4>
+                                <p>The<b> Delhi Airport Metro Express Pvt. Ltd. v. Delhi Metro Rail Corporation Ltd.</b>
+                                    case
+                                    is a significant ruling in arbitration law and public-private partnership (PPP)
+                                    governance in India. It upheld the sanctity of contracts, minimized judicial
+                                    interference in arbitration, and ensured financial accountability in infrastructure
+                                    projects.
+                                    <br>This case serves as a<b> precedent for future disputes</b> in the infrastructure
+                                    and PPP
+                                    sectors, promoting a more robust and legally secure business environment in India.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service area end -->
+    <!-- footer area start -->
+    <div id="footer"></div>
+    <!-- footer area end -->
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
+   <link rel=icon href="./images/favicon.png" sizes="20x20" type="image/png">
+
+   <script defer="defer" src="js/app.bundle.js"></script>
+   <link href="css/app.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+   
+   <!-- <script defer="defer" src="js/all.min.js"></script> -->
+   <script>
+      // Function to remove the preloader after content is loaded
+      function hidePreloader() {
+          document.getElementById('preloader').style.display = 'none';
+      }
+   
+      // Fetch header and footer
+      Promise.all([
+          fetch('header.html').then(response => response.text()).then(data => {
+              document.getElementById('header').innerHTML = data;
+          }),
+          fetch('footer.html').then(response => response.text()).then(data => {
+              document.getElementById('footer').innerHTML = data;
+          })
+      ]).then(() => {
+          // Once both header and footer are loaded, hide preloader
+          hidePreloader();
+      }).catch(error => {
+          console.error("Error loading header/footer:", error);
+          hidePreloader(); // Ensure preloader is removed even if there's an error
+      });
+   
+      // Fallback to remove preloader after a timeout (in case loading fails)
+      setTimeout(hidePreloader, 5000); // Hide after 5 seconds as a backup
+   </script>
+</head>
+
+<body>
+   <div id="header"></div>
+   <!-- page title start -->
+   <div class="breadcrumb-area bg-cover bg-center">
+    <div class="container">
+       <div class="breadcrumb-inner">
+          <div class="row justify-content-center">
+             <div class="custom-md:w-1/2">
+                <h2 class="page-title">Terms and Conditions</h2>
+             </div>
+             <div class="custom-md:w-1/2    custom-md:!text-end">
+                <ul class="page-list">
+                   <li><a href="index.html">Home</a></li>
+                   <li>Terms and Conditions</li>
+                </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+   <!-- page title end -->
+   <!-- contact area start -->
+   <div class="contact-area pd-top-120 pd-bottom-120">
+      <div class="container">
+         <div class="contact-page-inner bg-gray wow animated fadeInUp" data-wow-duration="0.8s">
+            <div class="section-title mb-[24px] pb-[8px]">
+               <h2 class="title">Introduction</h2>
+               <p class="content mb-0" style="font-size: 14px;">
+                These Terms and Conditions ("Terms" or "Agreement") constitute an electronic record in the form of an 
+                electronic contract under the Information Technology Act, 2000, and the rules made thereunder.<BR>
+                The terms "we / us / our / platform / Samjohta.com," individually and collectively, refer to https://www.samjohta.com/; and the terms "you / your / yourself / user" refer to any legal person or entity accessing the platform who is competent to enter into binding contracts, as per the provisions of the Indian Contract Act, 1872.
+                <br>
+                Please read the Terms carefully. By using the platform, you indicate that you understand, agree, and consent to the Terms. If you do not agree with the Terms, please refrain from using the platform. The user expressly agrees that we retain the sole and exclusive right to amend or modify the Terms and the Privacy Policy ("Policy") without any prior permission or intimation to the user. Any such amendments or modifications shall come into effect immediately upon being published on the platform.
+                <br>Samjohta.com is an online arbitration and dispute resolution platform designed for quick, cost-effective, and efficient resolution of legal disputes. Our platform leverages technology, innovation, and legal expertise to facilitate seamless arbitration services, bringing resolution processes to your fingertips. These services are collectively referred to as “Services.”
+                <br>Your use of the platform is governed by the Terms and the Policy. Each time you access the platform, the current version of the Terms will govern your usage. Therefore, you should review the Terms periodically to ensure you are aware of the latest version.
+                <br>By accessing any part of the platform, you unequivocally agree that the Terms and the Policy constitute a legally binding agreement between you and us. You shall be subject to the terms applicable to any service provided by the platform, and these shall be deemed incorporated into the Terms. You acknowledge that no physical or electronic signature is required to make the Terms and the Policy binding upon you, and that your act of visiting or using any part of the platform constitutes your full and final acceptance of the Terms and the Policy.
+                
+            </p>
+            </div>
+            <div class="section-title mb-[24px] pb-[8px]">
+                <h3 class="title">Disclaimer</h3>
+                <p class="content mb-0" style="font-size: 14px;">
+                    Samjohta.com is an arbitration platform and does not provide legal advice or function as a law firm. Any services, materials, or information provided by Samjohta.com are intended for arbitration and dispute resolution purposes only and should not be considered a substitute for legal counsel. Only a qualified legal practitioner can offer legal advice. Users seeking legal guidance should consult a licensed attorney. No attorney-client relationship is established by using our services or materials. We collaborate with experienced arbitrators and legal experts to facilitate dispute resolution.
+                </p>
+            </div>
+            <div class="section-title mb-[24px] pb-[8px]">
+                <h3 class="title">Eligibility</h3>
+                <p class="content mb-0" style="font-size: 14px;">
+                    The services offered through Samjohta.com are available only to individuals who are legally competent to enter into a binding contract under the Indian Contract Act, 1872. The platform is not intended for individuals under the age of 18. By accessing or using Samjohta.com, you confirm that you are 18 years or older. If a minor (under 18 years of age) wishes to use our services, a parent or legal guardian must accept the Terms and supervise all consultations and proceedings.    
+                </p>
+            </div>
+            <div class="section-title mb-[24px] pb-[8px]">
+                <h3 class="title">User Registration for Availing Services</h3>
+                <p class="content mb-0" style="font-size: 14px;">
+                    To access our arbitration services, users must register on Samjohta.com by creating an account and providing required details, including but not limited to their first name, last name, residential or office address, nationality, email address, and mobile number (collectively referred to as "Personal Information"). Users must ensure that all information provided is accurate, current, and complete. If any changes occur in your Personal Information, kindly notify us at info@samjohta.com to update your records.    
+                </p><br>
+                <h4 class="title">User Account, Password, and Security</h4>
+                <p class="content mb-0" style="font-size: 14px;">
+                    Once you complete the registration process on Samjohta.com, you are solely responsible for maintaining the confidentiality of your account credentials, including your username and password. You are fully accountable for all activities that occur under your account.
+                     If you suspect any unauthorized access or security breach, you must immediately notify us at info@samjohta.com with full details in the following cases: 
+                     <br>(a) &nbsp&nbsp
+                      You discover or suspect unauthorized access to your account.
+                     <br>(b)  &nbsp&nbsp
+                     You notice any discrepancies that may indicate unauthorized activity.
+                     <br>(c)  &nbsp&nbsp
+                     You forget your username and/or password.
+                     <br>(d)  &nbsp&nbsp
+                     You identify a security vulnerability on the platform.
+                     <br>We strongly recommend keeping your login credentials secure and not sharing them with anyone.
+                    Communication
+                    <br>By providing your personal information to Samjohta.com, you agree to receive informational and promotional messages, including emails and SMS notifications. You may opt out of these communications at any time by contacting info@samjohta.com with a request to unsubscribe, including your registered email address and mobile number.
+                    <br>However, for the purpose of availing arbitration services through our platform, users must adhere to the communication obligations outlined in Samjohta.com’s Dispute Resolution Rules. Click [here] for more details.
+                    <br><b>Payment Terms</b>
+                    <br>1. &nbsp&nbsp
+                     Samjohta.com is not liable for any loss or issue arising from payment transactions on the platform. Users are advised to ensure secure transactions while making payments.
+                    
+                    <br>2.&nbsp&nbsp 
+                    All payments for arbitration services must be made in Indian Rupees (INR), as accepted within the Republic of India. The platform does not support transactions in other currencies.
+                    
+                    <br>3.&nbsp&nbsp
+                    By initiating a transaction, you acknowledge entering into a legally binding contract to avail services and commit to making the required payment through your selected payment facility.
+                    
+                    <br>4. &nbsp&nbsp
+                     Accepted Payment Methods:
+                    <br>&nbsp&nbsp&nbsp&nbsp
+                     •	Net Banking
+                     <br>&nbsp&nbsp&nbsp&nbsp
+                     •	Debit Card
+                    <br>&nbsp&nbsp&nbsp&nbsp
+                     •	Credit Card
+                    
+                    <br>5. &nbsp&nbsp
+                    If you choose to pay via credit card, you warrant that:
+                    <br>&nbsp&nbsp&nbsp&nbsp (i) 
+                    The credit information you provide is accurate and complete.
+                    <br>&nbsp&nbsp&nbsp&nbsp (ii)
+                     Your credit card company will honor the charges.
+                    <br>&nbsp&nbsp&nbsp&nbsp(iii)
+                     You are using your own credit card for the transaction. Samjohta.com is not responsible for fraudulent credit card transactions. The liability for such fraud rests on the individual involved, and they must prove otherwise.
+                    <br>6. &nbsp&nbsp
+                     We reserve the right to refuse processing transactions for users with a history of questionable charges, including but not limited to previous breaches of agreements, violations of laws, or non-compliance with policies.
+                    <br>7. &nbsp&nbsp
+                     All valid credit/debit card transactions and other payment methods are processed through a secure payment gateway. These transactions are governed by the terms agreed upon between the buyer, the issuing bank, and the payment service provider.
+                    <br>8. &nbsp&nbsp 
+                    Online bank transfers are processed using the payment gateway provided by the respective issuing bank. The terms and conditions between the user and the issuing bank will govern these transactions.
+                    <br><b>For any payment-related queries,</b> please contact info@samjohta.com.
+                    <br><b>Refund and Cancellation Policy</b>
+                    <br>At Samjohta.com, we strive to provide seamless and effective arbitration services. Once an order is placed, if you wish to cancel, you must send an email to info@samjohta.com with the order details and a valid reason for cancellation. While you may cancel your order at any time, please note that all fees paid for our services are non-refundable. Refunds will only be issued in cases where the order has not been processed after purchase or if the requested service is outright rejected by us.
+                    <br><b>Privacy Policy</b>
+                    <br>Your use of Samjohta.com is governed by our Privacy Policy. This policy outlines important terms and conditions regarding the handling of your personal information, including sensitive personal data, as defined under the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011. By using our platform, you acknowledge and consent to the collection, usage, storage, and protection of your information in accordance with our Privacy Policy. We encourage you to carefully review these terms to understand your rights and our responsibilities.
+                    <br><b>Limited Use</b>
+                    <br>By accessing and using Samjohta.com, you agree not to reverse engineer, modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information obtained from our platform. Limited reproduction and copying of the content is permitted only if Samjohta.com is cited as the source and prior written consent is obtained from us. Any form of wholesale reproduction, commercial or non-commercial distribution, or unauthorized modification of data and content from our platform is strictly prohibited.
+                    <br><b>User Conduct and Rules</b>
+                    <br>By accessing and using Samjohta.com, you agree to engage in fair and ethical conduct. Our platform is designed to facilitate efficient and enforceable arbitration, and we expect users to uphold these principles. When using Samjohta.com, you agree not to:
+                    <br>1.&nbsp&nbsp
+                    	Defame, abuse, harass, stalk, threaten, or violate the legal rights of others.
+                    <br>2.&nbsp&nbsp
+                    	Publish, post, upload, distribute, or share any inappropriate, defamatory, obscene, unlawful, or offensive material.
+                    <br>3.&nbsp&nbsp
+                    	Violate any code of conduct, rules, or community guidelines established by Samjohta.com.
+                    <br>4.&nbsp&nbsp
+                    	Breach any applicable laws, regulations, or legal provisions in India or abroad.
+                    <br>5.&nbsp&nbsp
+                    	Contravene any terms and conditions set forth in this Agreement, our Privacy Policy, or any other policies governing the use of our platform.
+                    <br><b>Prohibited Activities</b>
+                    <br>You expressly agree not to host, display, upload, modify, publish, transmit, update, or share any content that:
+                    <br>1.&nbsp&nbsp
+                    	Belongs to another person and to which you have no legal rights.
+                    <br>2.&nbsp&nbsp
+                    	Is harmful, harassing, defamatory, obscene, pornographic, unlawful, hateful, or promotes gambling, money laundering, or any illegal activity.
+                    <br>3.&nbsp&nbsp
+                    	Causes harm to minors in any way.
+                    <br>4.&nbsp&nbsp
+                    	Infringes on any patent, trademark, copyright, or other proprietary rights.
+                    <br>5.&nbsp&nbsp
+                    	Violates any law currently in force.
+                    <br>6.&nbsp&nbsp
+                    	Misleads users about the origin of content or contains information that is offensive, menacing, or false.
+                    <br>7.&nbsp&nbsp
+                    	Impersonates any other individual or entity.
+                    <br>8.&nbsp&nbsp
+                    	Contains malicious software, viruses, or harmful code intended to disrupt or damage any system.
+                    <br>9.&nbsp&nbsp
+                    	Threatens national security, public order, friendly relations with foreign states, or incites any illegal activity.
+                    <br><b>Warranty and Representation</b>
+                    <br>By using Samjohta.com, you warrant that you are legally competent to enter into this Agreement and that your participation does not violate any existing contracts or legal obligations. You also agree to provide accurate and truthful information as required by Samjohta.com.
+                    <br><b>No Agency or Partnership</b>
+                    <br>Your use of Samjohta.com does not create any agency, partnership, joint venture, or employment relationship between you and Samjohta.com. Our platform solely serves as a neutral facilitator for arbitration and dispute resolution.
+                    <br><b>Limitation of Liability</b>
+                    <br>Samjohta.com, including any content, information, or services provided therein, is offered on an "as is" basis without any warranties, express or implied. This includes, but is not limited to, warranties of title, non-infringement, merchantability, or fitness for a particular purpose, except those that are implied by law and cannot be excluded, restricted, or modified under applicable regulations.
+                    <br> We do not guarantee uninterrupted or error-free access to the platform, nor do we ensure that defects will be corrected or that the platform or its hosting servers are free from viruses or harmful components. Your use of the platform is at your own risk, and we assume no responsibility for any data loss, system damage, or security breaches resulting from accessing or using the platform. We do not guarantee the accuracy, reliability, or compatibility of any arbitration services or legal information provided on Samjohta.com.
+                    <br>You acknowledge that we, along with our directors, officers, employees, agents, business partners, or representatives, shall not be liable for any direct, indirect, incidental, consequential, punitive, or special damages, including but not limited to loss of profits, data corruption, goodwill, business interruptions, or system malfunctions, arising from the use of the platform or reliance on the information provided.
+                    <br>If the above limitation is deemed unenforceable, our maximum liability to you shall not exceed the total amount paid by you for the arbitration services availed through Samjohta.com.
+                    <br>Despite our best efforts to maintain accuracy, errors or unauthorized modifications by third parties may occur. We do not guarantee the completeness or correctness of the content on our platform. If you identify any inaccuracies, please contact us at info@samjohta.com so that we can address the issue.
+                    <!-- <br> ________________________________________ -->
+                    <h5 class="title">Usage Terms</h5>
+                     <p style="font-size: 14px;">
+                        The information, materials, and services on Samjohta.com may contain typographical errors or outdated details. We do not assume responsibility for such errors and reserve the right to correct or update information at any time. We also reserve the right to refuse or cancel any arbitration requests if we believe they violate applicable laws, our terms of service, or ethical arbitration practices.
+                    <br>We may also cancel any requests that appear fraudulent, misleading, or otherwise harmful to our platform, users, or legal processes.
+                    <!-- <br>________________________________________ -->
+                     </p>
+                    <h5 class="title">Intellectual Property Rights</h5>
+                    <p style="font-size: 14px;"> 1. Unless explicitly stated otherwise or where proprietary rights belong to third parties, Samjohta.com holds all intellectual property rights related to the platform. This includes, but is not limited to, copyrights, trademarks, trade names, source code, databases, text, graphics, and other proprietary materials. Users are not permitted to reproduce, distribute, or modify any content from the platform without prior authorization.
+                        <br>2. However, you retain ownership and responsibility for any content you submit, including text, personal data, images, documents, or other materials uploaded to the platform. By submitting content, you grant us a limited right to use it solely for the purpose of facilitating arbitration services.
+                        <br>For any questions or concerns, reach out to us at info@samjohta.com.
+                        
+                        <br>Copyrighted Material for Limited Use This platform, Samjohta.com, contains graphics, photographs, images, document layouts, artwork, text, fonts, software tools, and other information (collectively referred to as "Content"). This platform and all Content are the copyrighted property of Samjohta.com and/or its subsidiaries or the copyrighted property of third parties from whom we have obtained licenses. All rights in this platform and its Content are reserved worldwide. It is strictly prohibited to retain, copy, distribute, publish, or use any portion of the Content except as expressly permitted herein. We reserve the right to modify, add, or remove any part of the Content at any time without prior notice.
+                        <br>Links to Third-Party Sites Third-party content may appear on the platform or may be accessible via links. We are not responsible for and assume no liability for any inaccuracies, legal misstatements, defamatory content, slander, libel, omissions, falsehoods, obscenities, or profanities in any third-party content appearing on the platform. You understand that the information and opinions in third-party content do not reflect our views or endorsements.
+                        <br>No Guarantee You acknowledge and agree that nothing on the platform shall be construed as a guarantee or promise regarding the results or effectiveness of our arbitration services. We assure you that we will provide services in a professional manner, in good faith, and in compliance with applicable laws. However, we do not guarantee specific outcomes.
+                        <br>Indemnity You agree to indemnify, defend, and hold harmless Samjohta.com from any losses, liabilities, claims, damages, costs, and expenses (including legal fees) arising from any breach of your obligations, representations, warranties, or agreements under these terms.
+                        <br> Notices By using the platform, you consent to electronically receive any communications from us, including notices, instructions, agreements, legally required disclosures, and other relevant information.
+                        <h6>Breach of Terms</h6><p style="font-size: 14px;"> We reserve the right to investigate complaints or violations of this Agreement and take appropriate action, including reporting suspected unlawful activity to law enforcement and blocking access to our platform. We may disclose relevant information as required by law or to protect our rights and users.
+                        </p>
+                        <h6>Confidentiality</h6><p style="font-size: 14px;">We take all necessary measures to maintain the confidentiality of your personal information and any content submitted to our platform. Our security protocols protect against unauthorized access, loss, misuse, or disclosure. For further details, please refer to our Privacy Policy.
+                        </p>
+                        <h6>Termination of Access</h6><p style="font-size: 14px;">These terms remain effective until terminated. We reserve the right to terminate your access to the platform at any time, for any reason, without prior notice or liability.
+                        </p>
+                        <h6>Entire Agreement</h6><p style="font-size: 14px;">These Terms, along with our Privacy Policy and any other relevant policies, constitute the entire agreement between you and Samjohta.com. If you do not agree with any part of this Agreement, please discontinue use of the platform.
+                        </p> 
+                        <h6>Severability</h6><p style="font-size: 14px;">If any provision of this Agreement is deemed illegal, invalid, or unenforceable, it shall not affect the validity or enforceability of any other provision.
+                        </p> 
+                        <h6>Waiver</h6><p style="font-size: 14px;">No delay or failure by us to exercise our rights or remedies shall be considered a waiver. Any waiver must be in writing and signed by us.
+                        </p> 
+                        <h6>Force Majeure</h6> <p style="font-size: 14px;">
+                        Neither party shall be liable for delays or failures in performance due to causes beyond reasonable control, including but not limited to government regulations, natural disasters, technological failures, strikes, or unforeseen legal restrictions.
+                     </p>
+                    <h6>Dispute Resolution </h6><p style="font-size: 14px;">
+                        Any disputes arising from this Agreement shall be resolved through arbitration, administered electronically, in accordance with the Arbitration and Conciliation Act, 1996, or any statutory modification thereof. A sole arbitrator shall preside over the proceedings, and the juridical seat shall be Mumbai, India. Arbitration shall be conducted in English, and each party shall bear its own costs. If electronic arbitration is not feasible, proceedings shall be conducted physically in Mumbai, India.
+                    </p>
+                     <h6>Governing Law and Jurisdiction</h6><p style="font-size: 14px;">
+                         This Agreement shall be governed by the laws of India. The courts of Mumbai shall have exclusive jurisdiction over any disputes arising from or related to this Agreement.
+                        </p>
+                         <h6>Grievance Officer and Redressal Mechanism</h6><p style="font-size: 14px;">
+                         Any complaints or concerns regarding these Terms should be directed to our Grievance Officer at:
+                        <br>Name: [Grievance Officer Name]
+                        <br>Email: [Grievance Officer Email]
+                        <br>Address: [Grievance Officer Address]
+                        <br>Complaints will be acknowledged within 24 hours and resolved within 15 days. A grievance shall be deemed resolved if: 
+                        <br>(a) The complainant accepts the response; or
+                        <br>(b) No further communication is received within 30 days of our response.
+                        <br><b> Section Headings</b> are for convenience only and have no legal effect.
+                        <br><b>Contact Information</b> For any inquiries regarding this Agreement, please contact us at: [Email Address]
+                    </p>    
+                    </p>
+                    
+                </p>
+            </div>
+         </div>
+         </div>
+      </div>
+   </div>
+   <!-- contact area end -->
+   <!-- map end -->
+   <!-- footer area start -->
+   <div id="footer"></div>
+   <!-- footer area end -->
+</body>
+
+</html>
